@@ -40,4 +40,30 @@
         <x:expect label="URI">http://data.europa.eu/ePO/ontology#PASSFAIL</x:expect>
     </x:scenario>
 
+
+    <x:scenario label="Scenario for testing function build connector URI">
+        <x:call template="buildConnectorURI">
+            <x:param name="xmiConnector"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/connectors/connector[ @xmi:idref = 'EAID_1F057680_2DD1_465d_A815_73DADF8FF850']"
+            />
+            <x:param name="root"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')"
+            />
+        </x:call>
+        <x:expect label="URI">http://data.europa.eu/ePO/ontology#has-EO-Group-Type</x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing function build connector end URI">
+        <x:call template="buildConnectorEndURI">
+            <x:param name="xmiConnector"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/connectors/connector[./@xmi:idref = 'EAID_9BFA9CBA_AA02_4344_997E_2891C61F633A']"
+            />
+            <x:param name="xmiConnectorEnd" select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/connectors/connector[./@xmi:idref = 'EAID_9BFA9CBA_AA02_4344_997E_2891C61F633A']/target"></x:param>
+            <x:param name="root"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')"
+            />
+        </x:call>
+        <x:expect label="URI">http://data.europa.eu/ePO/ontology#makes-decsion</x:expect>
+    </x:scenario>
+
 </x:description>

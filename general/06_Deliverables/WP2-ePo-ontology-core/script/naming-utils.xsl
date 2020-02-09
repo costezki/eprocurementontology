@@ -26,9 +26,26 @@
     <!-- Setting useful prefix definitions -->
     <xsl:variable name="prefixes" select="document('namespaces.xml')"/>
 
+    <xd:doc>
+        <xd:desc>Lookup a prefix in the sourceContent (usually an external file with namespace
+            definitions) and return the namespace corresponding to the prefix</xd:desc>
+        <xd:param name="prefix"/>
+        <xd:param name="sourceContent"/>
+    </xd:doc>
+    <xsl:template name="getNamespaceValue" as="item()*">
+        <xsl:param name="prefix"/>
+        <xsl:param name="sourceContent"/>
+        
+        <xsl:variable name="prefixNamespace" select="$sourceContent/*:prefixes/*:prefix/@value[../@name = $prefix]"/>
+        
+        <xsl:choose>
+            <xsl:when test="$prefixNamespace"><xsl:value-of select="$prefixNamespace"/></xsl:when>
+            <xsl:otherwise>http://unknown/namespace/<xsl:value-of select="fn:encode-for-uri($prefix)"/>#</xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
 
     <xd:doc>
-        <xd:desc/>
+        <xd:desc> generate the element URI pased on the parent package name</xd:desc>
         <xd:param name="xmiElement"> XMI element to build </xd:param>
         <xd:param name="root"/>
     </xd:doc>
@@ -88,17 +105,84 @@
         <xsl:value-of select="fn:concat($namespace, $name)"/>
     </xsl:template>
 
-    
+
     <xd:doc>
-        <xd:desc>Lookup a prefix in the sourceContent (usually an external file with namespace
-            definitions) and return the namespace corresponding to the prefix</xd:desc>
-        <xd:param name="prefix"/>
-        <xd:param name="sourceContent"/>
+        <xd:desc> build the URI for a connector based on the name and parent package of the connector source</xd:desc>
+        <!--<xd:param name="xmiElement"> Source XMI element </xd:param>-->
+        <xd:param name="root"/>
+        <xd:param name="xmiConnector">XMI attribute to build</xd:param>
     </xd:doc>
-    <xsl:template name="getNamespaceValue" as="item()*">
-        <xsl:param name="prefix"/>
-        <xsl:param name="sourceContent"/>
-        <xsl:value-of select="$sourceContent/*:prefixes/*:prefix/@value[../@name = $prefix]"/>
+    <xsl:template name="buildConnectorURI" as="item()*">
+        <xsl:param name="xmiConnector"/>
+        <xsl:param name="root"/>
+        
+        <!--<xsl:variable name="name" select="$xmiConnector/@name"/>-->
+        <xsl:variable name="sourceId" select="$xmiConnector/source/@xmi:idref"/>
+        
+        <xsl:variable name="parentPackage"
+            select="$root//packagedElement[@xmi:id = $sourceId]/../@name"/>
+        
+        <xsl:variable name="namespace">
+            <xsl:call-template name="getNamespaceValue">
+                <xsl:with-param name="sourceContent" select="$prefixes"/>
+                <xsl:with-param name="prefix" select="$parentPackage"/>
+            </xsl:call-template>
+        </xsl:variable>
+        
+        <xsl:variable name="name">
+            <xsl:call-template name="formatNameString">
+                <xsl:with-param name="input" select="$xmiConnector/@name"/>
+            </xsl:call-template>
+        </xsl:variable>
+        
+        <xsl:choose>
+            <xsl:when test="$xmiConnector/@name">
+                <xsl:value-of select="fn:concat($namespace, $name)"/>        
+            </xsl:when>
+            <xsl:otherwise>
+                <!--<xsl:value-of select="fn:concat('unnamed-connector-',$xmiConnector/@xmi:idref)"/>-->
+            </xsl:otherwise>
+        </xsl:choose>        
     </xsl:template>
+
+    <xd:doc>
+        <xd:desc> build the URI for a connector end (either source or target) based on the name and parent package of the connector source</xd:desc>
+        <xd:param name="root"/>
+        <xd:param name="xmiConnectorEnd">connector end to build URI for</xd:param>
+        <xd:param name="xmiConnector">parent connector</xd:param>
+    </xd:doc>
+    <xsl:template name="buildConnectorEndURI" as="item()*">
+        <xsl:param name="xmiConnectorEnd"/>
+        <xsl:param name="xmiConnector"></xsl:param>
+        <xsl:param name="root"/>
+        
+        <xsl:variable name="sourceId" select="$xmiConnector/source/@xmi:idref"/>
+        
+        <xsl:variable name="parentPackage"
+            select="$root//packagedElement[@xmi:id = $sourceId]/../@name"/>
+        
+        <xsl:variable name="namespace">
+            <xsl:call-template name="getNamespaceValue">
+                <xsl:with-param name="sourceContent" select="$prefixes"/>
+                <xsl:with-param name="prefix" select="$parentPackage"/>
+            </xsl:call-template>
+        </xsl:variable>
+        
+        <xsl:variable name="name">
+            <xsl:call-template name="formatNameString">
+                <xsl:with-param name="input" select="$xmiConnectorEnd/role/@name"/>
+            </xsl:call-template>
+        </xsl:variable>
+        
+        <xsl:choose>
+            <xsl:when test="$name != ''">
+                <xsl:value-of select="fn:concat($namespace, $name)"/>        
+            </xsl:when>
+            <xsl:otherwise>
+                <!--<xsl:value-of select="fn:concat('unnamed-connector-',$xmiConnector/@xmi:idref)"/>-->
+            </xsl:otherwise>
+        </xsl:choose>        
+    </xsl:template>
+    
     
 </xsl:stylesheet>

@@ -46,7 +46,7 @@
         <xsl:param name="input"/>
         <xsl:variable name="doc0" select="fn:normalize-space($input)"/>
         <xsl:variable name="doc1" select="fn:replace($doc0, '\s', '-')"/>
-        <xsl:value-of select="$doc1"/>
+        <xsl:value-of select="fn:encode-for-uri($doc1)"/>
     </xsl:template>
     
 </xsl:stylesheet>
