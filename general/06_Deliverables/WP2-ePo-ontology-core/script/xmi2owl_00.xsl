@@ -14,29 +14,19 @@
     xmlns:uml="http://schema.omg.org/spec/UML/2.1"
 -->
 
-<xsl:stylesheet 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
-    xmlns:fn="http://www.w3.org/2005/xpath-functions"
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:fn="http://www.w3.org/2005/xpath-functions"
     exclude-result-prefixes="xs math xd xsl uml xmi umldi dc fn"
-    
     xmlns:uml="http://www.omg.org/spec/UML/20131001"
     xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
     xmlns:umldi="http://www.omg.org/spec/UML/20131001/UMLDI"
-    xmlns:dc="http://www.omg.org/spec/UML/20131001/UMLDC"
-    
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://www.omg.org/spec/UML/20131001/UMLDC" xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-    
-    xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    
-    
-    version="3.0">
-    
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="3.0">
+   
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> Feb 4, 2020</xd:p>
@@ -45,34 +35,35 @@
         </xd:desc>
     </xd:doc>
     
-    <!-- Global variables   -->
-    <xsl:output method="xml" encoding="UTF-8" byte-order-mark="no"
-        indent="yes" cdata-section-elements="lines"/>
+    <xsl:import href="naming-utils.xsl"/>
+    <xsl:import href="formatting-uitils.xsl"/>
     
+    <!-- Global variables   -->
+    <xsl:output method="xml" encoding="UTF-8" byte-order-mark="no" indent="yes"
+        cdata-section-elements="lines"/>
+
     <xsl:variable name="sourcedoc" select="/"/>
     <xsl:variable name="document-uri" select="document-uri(.)"/>
-    <xsl:variable name="base-uri" select="'http://publications.europa.eu/ontology/eProcurement'"/>
+    <xsl:variable name="base-uri" select="'http://publications.europa.eu/ontology/ePO'"/>
+ 
+    <xsl:variable name="date" select="replace(string(current-time()), '([\D])', 'x')"/>
+
 
     <xd:doc>
         <xd:desc>
-            <xd:p>
-                The document entry template
-            </xd:p>
+            <xd:p> The document entry template </xd:p>
         </xd:desc>
     </xd:doc>
     <xsl:template match="/">
-        <xsl:variable name="dateStr" select="string(current-time())"/>
-        <xsl:variable name="cleanStr" select="replace($dateStr, '([\D])', 'x')"/>
-        <xsl:variable name="unique" select="xmi:XMI/uml:Model/@name"/>
-        <xsl:variable name="id4ref" select="concat($unique, $cleanStr)"/>
-        
-
-        <!--<xsl:apply-templates select="XMI"/>-->
-
         <rdf:RDF>
             <xsl:call-template name="namespace-setter"/>
+            <xsl:call-template name="ontology-header"/>
+            <!--<xsl:call-template name="classLoop"/>-->
+            <!--<xsl:call-template name="enumerationLoop"/>-->
+            <xsl:call-template name="generalisationLoop"/>
+            <xsl:call-template name="associationLoop"/>
+            <xsl:call-template name="dependecyLoop"/>
             
-            <xsl:call-template name="elementLoop"/>
         </rdf:RDF>
     </xsl:template>
 
@@ -80,13 +71,13 @@
         <xd:desc>Provides some namespaces</xd:desc>
     </xd:doc>
     <xsl:template name="namespace-setter">
-        <xsl:namespace name="o" select="concat($base-uri,'#')"></xsl:namespace>
-        <xsl:attribute name="xml:base" expand-text="true">{$base-uri}</xsl:attribute>                
+        <xsl:namespace name="epo" select="concat($base-uri, '#')"/>
+        <xsl:attribute name="xml:base" expand-text="true">{$base-uri}</xsl:attribute>
     </xsl:template>
-        
-        
+
+
     <xd:doc>
-        <xd:desc> Generic Ontology header </xd:desc>
+        <xd:desc> Ontology header </xd:desc>
     </xd:doc>
     <xsl:template name="ontology-header">
         <owl:Ontology rdf:about="">
@@ -98,86 +89,174 @@
             <dct:contributor rdf:resource="http://costezki.ro/eugeniu"/>
             <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
             <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
-            <dct:creator rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/PUBL"/>
-            <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-05</dct:modified>
+            <dct:creator
+                rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/PUBL"/>
+            <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+                ><xsl:value-of select="$date"/></dct:modified>
         </owl:Ontology>
     </xsl:template>
 
     <xd:doc>
         <xd:desc>
-            <xd:p> This template selects the known elements </xd:p>
+            <xd:p> This template selects the class elements </xd:p>
         </xd:desc>
         <!--<xd:param name="rootElt"/>-->
     </xd:doc>
-
-    <xsl:template name="elementLoop">
+    <xsl:template name="classLoop">
         <!--<xsl:param name="rootElt"/>-->
-        <xsl:for-each
-            select="//xmi:Extension/elements/element[@xmi:type = 'uml:Class']">
-            
-                    
-            
+        <xsl:for-each select="//xmi:Extension/elements/element[@xmi:type = 'uml:Class']">
             <xsl:call-template name="classDefinition">
                 <xsl:with-param name="classElement" select="."/>
-                
-                <!--<xsl:with-param name="className" select="$className"/>
-                <xsl:with-param name="idref" select="$idref"/>-->
             </xsl:call-template>
         </xsl:for-each>
-
     </xsl:template>
 
+    
 
     <xd:doc>
         <xd:desc>
-            <xd:p> This template creates a class definition </xd:p>
+            <xd:p> This template creates the owl:Class definition </xd:p>
         </xd:desc>
         <!--<xd:param name="className"/>
         <xd:param name="idref"/>-->
         <xd:param name="classElement"/>
     </xd:doc>
-    
+
     <xsl:template name="classDefinition">
         <xsl:param name="classElement"/>
-<!--        <xsl:param name="className"/>
-        <xsl:param name="idref"/>-->
-        
+
         <xsl:variable name="className" select="$classElement/@name"/>
-        <xsl:variable name="idref" select="$classElement/@xmi:idref"/>  
+        <xsl:variable name="idref" select="$classElement/@xmi:idref"/>
+
+        <xsl:variable name="classURI">
+            <xsl:call-template name="buildElementURI">
+                <xsl:with-param name="xmiElement" select="$classElement"/>
+                <xsl:with-param name="root" select="fn:root()"/>
+            </xsl:call-template>
+        </xsl:variable>
+
+        <xsl:variable name="documentation" select="$classElement/properties/@documentation"/>
+
         
-        <xsl:variable name="packageName" select="//packagedElement[@xmi:id = $idref]/../@name"/>
-        <xsl:variable name="classURI" select="concat($packageName, ':', $className)"/>
-    
-        <xsl:variable name="documentation"
-            select="$classElement/properties/@documentation"/>
         
-        
-        <owl:Class rdf:ID="{$idref}">
-            <rdfs:label><xsl:value-of select="$className"/></rdfs:label>
-            <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
-                <xsl:call-template name="FormatString">
-                    <xsl:with-param name="docAttr1" select="$documentation"/>
-                </xsl:call-template>
-            </rdfs:comment>
-        </owl:Class>    
+        <!-- rdf:ID="{$idref}" -->
+        <owl:Class rdf:about="{$classURI}">
+            <rdfs:label xml:lang="en">
+                <xsl:choose>
+                    <xsl:when test="$className">
+                        <xsl:value-of select="$className"/>
+                    </xsl:when>
+                    <xsl:otherwise>Unnamed class</xsl:otherwise>
+                </xsl:choose>                
+            </rdfs:label>
+
+            <skos:prefLabel xml:lang="en">
+                <xsl:choose>
+                    <xsl:when test="$className">
+                        <xsl:value-of select="$className"/>
+                    </xsl:when>
+                    <xsl:otherwise>Unnamed class</xsl:otherwise>
+                </xsl:choose>                
+            </skos:prefLabel>            
+            
+            <xsl:choose>
+                <xsl:when test="$documentation">
+                    <rdfs:comment rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">
+                        <xsl:call-template name="formatDocString">
+                            <xsl:with-param name="input" select="$documentation"/>
+                        </xsl:call-template>
+                    </rdfs:comment>
+                </xsl:when>
+            </xsl:choose>                       
+        </owl:Class>
     </xsl:template>
 
+   
     <xd:doc>
-        <xd:desc/>
-        <xd:param name="docAttr1">
-            Format the Documentation string
-        </xd:param>
+        <xd:desc>
+            <xd:p> This template selects the enumeration elements </xd:p>
+        </xd:desc>
+        <!--<xd:param name="rootElt"/>-->
     </xd:doc>
-    <xsl:template name="FormatString" as="item()*">
-        <xsl:param name="docAttr1"/>
-        <xsl:variable name="doc0"
-            select="fn:replace($docAttr1, '&lt;a href', '&lt;xref scope=&#x0022;external&#x0022; href')"/>
-        <xsl:variable name="doc1" select="fn:replace($doc0, '&lt;/a&gt;', '&lt;/xref&gt;')"/>
-        <xsl:variable name="doc2" select="fn:replace($doc1, 'font color', 'foreign otherprops')"/>
-        <xsl:variable name="doc3" select="fn:replace($doc2, '&lt;/font&gt;', '&lt;/foreign&gt;')"/>
-        <xsl:variable name="doc4" select="fn:replace($doc3, 'nbsp', '#x00A0')"/>
-        <xsl:variable name="doc5" select="fn:replace($doc4, '\$inet://', '')"/>
-        <xsl:value-of select="$doc5"/>
+    <xsl:template name="enumerationLoop">
+        <!--<xsl:param name="rootElt"/>-->
+        <xsl:for-each select="//xmi:Extension/elements/element[@xmi:type = 'uml:Enumeration']">
+            <xsl:call-template name="enumerationDefinition">
+                <xsl:with-param name="enumerationElement" select="."/>
+            </xsl:call-template>
+        </xsl:for-each>
     </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>This template creates the Concept scheme and scheme definition</xd:desc>
+        <xd:param name="enumerationElement"/>
+    </xd:doc>
+    <xsl:template name="enumerationDefinition">
+        <xsl:param name="enumerationElement"/>
+        
+        <!-- variables for the CS content -->
+        <xsl:variable name="conceptSchemeName" select="$enumerationElement/@name"/>        
+        
+        <xsl:variable name="conceptSchemeURI">
+            <xsl:call-template name="buildElementURI">
+                <xsl:with-param name="xmiElement" select="$enumerationElement"/>
+                <xsl:with-param name="root" select="fn:root()"/>
+            </xsl:call-template>
+        </xsl:variable>
+        
+        <xsl:variable name="documentation" select="$enumerationElement/properties/@documentation"/>
+        
+        <!-- generating the actual CS content -->
+        <skos:ConceptScheme rdf:about="{$conceptSchemeURI}">
+            <skos:prefLabel><xsl:value-of select="$conceptSchemeName"/></skos:prefLabel>
+            <xsl:choose>
+                <xsl:when test="$documentation">
+                    <skos:definition><xsl:value-of select="$documentation"/></skos:definition>
+                </xsl:when>
+            </xsl:choose>            
+        </skos:ConceptScheme>
+        
+        <!-- iterating Enumeration attributes -->
+        <xsl:for-each select="$enumerationElement/attributes/attribute">
+            <xsl:variable name="conceptName" select="./@name"/>
+            <xsl:variable name="conceptURI">
+                <xsl:call-template name="buildAttributeURI">
+                    <xsl:with-param name="xmiElement" select="$enumerationElement"/>
+                    <xsl:with-param name="root" select="fn:root()"/>
+                    <xsl:with-param name="xmiAttribute" select="."/>
+                </xsl:call-template>
+            </xsl:variable>
+            
+            <!-- generating the actual Concept content -->
+            <skos:Concept rdf:about="{$conceptURI}">
+                <skos:inScheme rdf:resource="{$conceptSchemeURI}"/>
+                <skos:notation><xsl:value-of select="$conceptName"/></skos:notation>
+                <xsl:choose>
+                    <xsl:when test="./initial/@body">
+                        <skos:prefLabel xml:lang="en"><xsl:value-of select="./initial/@body"/></skos:prefLabel>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <skos:prefLabel xml:lang="en"><xsl:value-of select="$conceptName"/></skos:prefLabel>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </skos:Concept>
+        </xsl:for-each>
+    </xsl:template>
+    
+
+    <xd:doc>
+        <xd:desc> generate subclass statements </xd:desc>
+    </xd:doc>
+    <xsl:template name="dependecyLoop">
+        <xsl:for-each select="//xmi:Extension/elements/connectors[@xmi:type = 'uml:Generalization']">
+            <xsl:call-template name="classDefinition">
+                <xsl:with-param name="classElement" select="."/>
+            </xsl:call-template>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="associationLoop"/>
+    <xsl:template name="generalisationLoop"/>
+    
 
 </xsl:stylesheet>

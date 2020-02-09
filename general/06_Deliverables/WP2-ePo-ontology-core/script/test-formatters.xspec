@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/formatting-uitils.xsl">
+    <x:scenario label="Scenario for testing function formatDocString">
+        <x:call template="formatDocString">
+            <x:param name="input" select="'simple text'"/>
+        </x:call>
+        <x:expect label="same simple text">simple text</x:expect>
+    </x:scenario>
+
+    <x:scenario label="formatNameString - normalised spaces and replaced with hyphens">
+        <x:call template="formatNameString">
+            <x:param name="input"> Class  Name </x:param>            
+        </x:call>
+        <x:expect label="hypenated name">Class-Name</x:expect>
+    </x:scenario>
+    
+    
+</x:description>

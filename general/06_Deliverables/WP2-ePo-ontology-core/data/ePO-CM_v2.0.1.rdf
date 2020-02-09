@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:epo="http://publications.europa.eu/ontology/ePO#"
+         xml:base="http://publications.europa.eu/ontology/ePO">
+   <owl:Ontology rdf:about="">
+      <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+      <rdfs:comment xml:lang="en">This is the eProcurement ontology definition.</rdfs:comment>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
+      <rdfs:label xml:lang="en">eProcurement ontology</rdfs:label>
+      <owl:versionInfo>eProcurement Ontology version 0.0.2 (auto generated)</owl:versionInfo>
+      <dct:contributor rdf:resource="http://costezki.ro/eugeniu"/>
+      <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+      <rdfs:seeAlso rdf:resource="https://op.europa.eu/en/web/eu-vocabularies/e-procurement"/>
+      <dct:creator rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/PUBL"/>
+      <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">01x17x01x666x01x00</dct:modified>
+   </owl:Ontology>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Accelerated-Procedure-Justification-Type">
+      <skos:prefLabel>Accelerated Procedure Justification Type</skos:prefLabel>
+      <skos:definition>A procurement procedure where the time limit for receipt of tenders can be reduced due to a state of urgency.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PIN_REDUCE_TIME_LIMIT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Accelerated-Procedure-Justification-Type"/>
+      <skos:notation>PIN_REDUCE_TIME_LIMIT</skos:notation>
+      <skos:prefLabel xml:lang="en">Prior Information Notice to reduce time limits</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#STATE_OF_URGENCY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Accelerated-Procedure-Justification-Type"/>
+      <skos:notation>STATE_OF_URGENCY</skos:notation>
+      <skos:prefLabel xml:lang="en">State of Urgency</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Authority-Type">
+      <skos:prefLabel>Authority Type</skos:prefLabel>
+      <skos:definition>Aternative name to this code list:
+
+- Authority Competency Level Type
+</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CGA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Authority-Type"/>
+      <skos:notation>CGA</skos:notation>
+      <skos:prefLabel xml:lang="en">Central Government Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SCA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Authority-Type"/>
+      <skos:notation>SCA</skos:notation>
+      <skos:prefLabel xml:lang="en">Subcentral Government Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#RA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Authority-Type"/>
+      <skos:notation>RA</skos:notation>
+      <skos:prefLabel xml:lang="en">Regional Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#LA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Authority-Type"/>
+      <skos:notation>LA</skos:notation>
+      <skos:prefLabel xml:lang="en">Local Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BGPL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Authority-Type"/>
+      <skos:notation>BGPL</skos:notation>
+      <skos:prefLabel xml:lang="en">Body Governed by Public Law</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Award-Evaluation-Method-Type">
+      <skos:prefLabel>Award Evaluation Method Type</skos:prefLabel>
+      <skos:definition>A code signifying the type of criterion.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Award-Evaluation-Method-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Award-Evaluation-Method-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.AWARD.LOWEST">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Award-Evaluation-Method-Type"/>
+      <skos:notation>CRITERION.AWARD.LOWEST</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.AWARD.LOWEST</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.AWARD.MOST_ECONOMIC_TENDER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Award-Evaluation-Method-Type"/>
+      <skos:notation>CRITERION.AWARD.MOST_ECONOMIC_TENDER</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.AWARD.MOST_ECONOMIC_TENDER</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.AWARD.OTHER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Award-Evaluation-Method-Type"/>
+      <skos:notation>CRITERION.AWARD.OTHER</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.AWARD.OTHER</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.AWARD.MIXED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Award-Evaluation-Method-Type"/>
+      <skos:notation>CRITERION.AWARD.MIXED</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.AWARD.MIXED</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Award-Without-Prior-Publication-Type">
+      <skos:prefLabel>Award Without Prior Publication Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#AwardType">
+      <skos:prefLabel>AwardType</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#buyer-legal-type">
+      <skos:prefLabel>buyer-legal-type</skos:prefLabel>
+      <skos:definition>[INTERNAL NOTE: Beware this Code List was previously named "Authority Type" (as in MDR), and contained less concepts than the ones proposed by DG GROW.]
+
+Aternative name to this code list:
+
+- Authority Competency Level Type
+</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#cen-aut">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>cen-aut</skos:notation>
+      <skos:prefLabel xml:lang="en">Central Government Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#reg-aut">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>reg-aut</skos:notation>
+      <skos:prefLabel xml:lang="en">Regional Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#loc-aut">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>loc-aut</skos:notation>
+      <skos:prefLabel xml:lang="en">Local Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#publ-law-body">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>publ-law-body</skos:notation>
+      <skos:prefLabel xml:lang="en">Body Governed by Public Law</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#pub-undert">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>pub-undert</skos:notation>
+      <skos:prefLabel xml:lang="en">Public Undertaking</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#spec-rights-ent">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>spec-rights-ent</skos:notation>
+      <skos:prefLabel xml:lang="en">Entity With Special Rights</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#org-awa-con">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>org-awa-con</skos:notation>
+      <skos:prefLabel xml:lang="en">Organisation Awarding a Contract Subsidised by a Contracting Authority</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#def-cont">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>def-cont</skos:notation>
+      <skos:prefLabel xml:lang="en">Defense Contractor</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#int-org">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#buyer-legal-type"/>
+      <skos:notation>int-org</skos:notation>
+      <skos:prefLabel xml:lang="en">International Organisation</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Communication-Type">
+      <skos:prefLabel>Communication Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#Indirect">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Communication-Type"/>
+      <skos:notation>Indirect</skos:notation>
+      <skos:prefLabel xml:lang="en">Indirect</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#Direct">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Communication-Type"/>
+      <skos:notation>Direct</skos:notation>
+      <skos:prefLabel xml:lang="en">Direct</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Confidentiality-Level-Type">
+      <skos:prefLabel>Confidentiality Level Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PUBLIC">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Confidentiality-Level-Type"/>
+      <skos:notation>PUBLIC</skos:notation>
+      <skos:prefLabel xml:lang="en">Information that can be disclose without any particular restriction.</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#TOP_SECRET">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Confidentiality-Level-Type"/>
+      <skos:notation>TOP_SECRET</skos:notation>
+      <skos:prefLabel xml:lang="en">Information and material the unauthorised disclosure of which could cause exceptionally grave prejudice to the essential interests of the European Union, of one or more of the Member States  or of one or more parties participating in a Procedure.</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SECRET">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Confidentiality-Level-Type"/>
+      <skos:notation>SECRET</skos:notation>
+      <skos:prefLabel xml:lang="en">Information and material the unauthorised disclosure of which could seriously harm the essential interests of the European Union, of one or more of the Member States or of one or more parties participating in a Procedure.</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CONFIDENTIAL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Confidentiality-Level-Type"/>
+      <skos:notation>CONFIDENTIAL</skos:notation>
+      <skos:prefLabel xml:lang="en">Information and material the unauthorised disclosure of which could harm the essential interests of the European Union, of one or more of the Member States or of one or more parties participating in a Procedure.</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#RESTRICTED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Confidentiality-Level-Type"/>
+      <skos:notation>RESTRICTED</skos:notation>
+      <skos:prefLabel xml:lang="en">Information and material the unauthorised disclosure of which could be disadvantageous to the interests of the European Union, of one or more of the Member States or of one or more parties participating in a Procedure.</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Contract-Modification-Type">
+      <skos:prefLabel>Contract Modification Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CONTRACT_SCOPE_CHANGE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Contract-Modification-Type"/>
+      <skos:notation>CONTRACT_SCOPE_CHANGE</skos:notation>
+      <skos:prefLabel xml:lang="en">Contract Scope Change</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CONTRACT_RENEWAL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Contract-Modification-Type"/>
+      <skos:notation>CONTRACT_RENEWAL</skos:notation>
+      <skos:prefLabel xml:lang="en">Contract renewal</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CONTRACT_DEADLINE_EXTENSION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Contract-Modification-Type"/>
+      <skos:notation>CONTRACT_DEADLINE_EXTENSION</skos:notation>
+      <skos:prefLabel xml:lang="en">Contract deadline extension</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PRICE_RENEWAL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Contract-Modification-Type"/>
+      <skos:notation>PRICE_RENEWAL</skos:notation>
+      <skos:prefLabel xml:lang="en">Price renewal</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CHANGE_OF_IPC">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Contract-Modification-Type"/>
+      <skos:notation>CHANGE_OF_IPC</skos:notation>
+      <skos:prefLabel xml:lang="en">Change of IPC</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#contract-nature">
+      <skos:prefLabel>contract-nature</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#works">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#contract-nature"/>
+      <skos:notation>works</skos:notation>
+      <skos:prefLabel xml:lang="en">Works</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#supplies">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#contract-nature"/>
+      <skos:notation>supplies</skos:notation>
+      <skos:prefLabel xml:lang="en">Supplies</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#services">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#contract-nature"/>
+      <skos:notation>services</skos:notation>
+      <skos:prefLabel xml:lang="en">Services</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Country">
+      <skos:prefLabel>Country</skos:prefLabel>
+      <skos:definition>A country is one of the political units which the world is divided into, covering a particular area of land.
+
+Compulsory use of the code list from the ISO 3166-1 alpha-3.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AFG">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>AFG</skos:notation>
+      <skos:prefLabel xml:lang="en">Afghanistan</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ALA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ALA</skos:notation>
+      <skos:prefLabel xml:lang="en">Aland Islands</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ALB">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ALB</skos:notation>
+      <skos:prefLabel xml:lang="en">Albania</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#DZA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>DZA</skos:notation>
+      <skos:prefLabel xml:lang="en">Algeria</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ASM">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ASM</skos:notation>
+      <skos:prefLabel xml:lang="en">American Samoa</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AND">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>AND</skos:notation>
+      <skos:prefLabel xml:lang="en">Andorra</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AGO">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>AGO</skos:notation>
+      <skos:prefLabel xml:lang="en">Angola</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AIA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>AIA</skos:notation>
+      <skos:prefLabel xml:lang="en">Anguilla</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ATA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ATA</skos:notation>
+      <skos:prefLabel xml:lang="en">Antartica</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ATG">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ATG</skos:notation>
+      <skos:prefLabel xml:lang="en">Antigua and Barbuda</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ARG">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ARG</skos:notation>
+      <skos:prefLabel xml:lang="en">Argentina</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ARM">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ARM</skos:notation>
+      <skos:prefLabel xml:lang="en">Armenia</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ABW">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>ABW</skos:notation>
+      <skos:prefLabel xml:lang="en">Aruba</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AUS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>AUS</skos:notation>
+      <skos:prefLabel xml:lang="en">Australia</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AUT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>AUT</skos:notation>
+      <skos:prefLabel xml:lang="en">Austria</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AZE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>AZE</skos:notation>
+      <skos:prefLabel xml:lang="en">Azerbaijan</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BHS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BHS</skos:notation>
+      <skos:prefLabel xml:lang="en">Bahamas</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BHR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BHR</skos:notation>
+      <skos:prefLabel xml:lang="en">Bahrain</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BGD">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BGD</skos:notation>
+      <skos:prefLabel xml:lang="en">Bangladesh</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BRB">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BRB</skos:notation>
+      <skos:prefLabel xml:lang="en">Barbados</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BLR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BLR</skos:notation>
+      <skos:prefLabel xml:lang="en">Belarus</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BEL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BEL</skos:notation>
+      <skos:prefLabel xml:lang="en">Belgium</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BLZ">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BLZ</skos:notation>
+      <skos:prefLabel xml:lang="en">Belize</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BEN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BEN</skos:notation>
+      <skos:prefLabel xml:lang="en">Benin</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BMU">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BMU</skos:notation>
+      <skos:prefLabel xml:lang="en">Bermuda</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BTN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BTN</skos:notation>
+      <skos:prefLabel xml:lang="en">Bhutan</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BOL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BOL</skos:notation>
+      <skos:prefLabel xml:lang="en">Bolivia</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BIH">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BIH</skos:notation>
+      <skos:prefLabel xml:lang="en">Bosnia and Herzegovina</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BWA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BWA</skos:notation>
+      <skos:prefLabel xml:lang="en">Botswana</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BVT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BVT</skos:notation>
+      <skos:prefLabel xml:lang="en">Bouvet Island</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BRA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BRA</skos:notation>
+      <skos:prefLabel xml:lang="en">Brazil</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#VGB">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>VGB</skos:notation>
+      <skos:prefLabel xml:lang="en">British Virgin Islands</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#IOT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>IOT</skos:notation>
+      <skos:prefLabel xml:lang="en">British Indian Ocean Territory</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BRN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BRN</skos:notation>
+      <skos:prefLabel xml:lang="en">Brunei Darussalam</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BGR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BGR</skos:notation>
+      <skos:prefLabel xml:lang="en">Bulgaria</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BFA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BFA</skos:notation>
+      <skos:prefLabel xml:lang="en">Burkina Faso</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#BDI">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>BDI</skos:notation>
+      <skos:prefLabel xml:lang="en">Burundi</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#KHM">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>KHM</skos:notation>
+      <skos:prefLabel xml:lang="en">Cambodia</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CMR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CMR</skos:notation>
+      <skos:prefLabel xml:lang="en">Cameroon</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CAN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CAN</skos:notation>
+      <skos:prefLabel xml:lang="en">Canada</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CPV">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CPV</skos:notation>
+      <skos:prefLabel xml:lang="en">Cape Verde</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CYM">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CYM</skos:notation>
+      <skos:prefLabel xml:lang="en">Cayman Islands</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CAF">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CAF</skos:notation>
+      <skos:prefLabel xml:lang="en">Central African Republic</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#TCD">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>TCD</skos:notation>
+      <skos:prefLabel xml:lang="en">Chad</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CHL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CHL</skos:notation>
+      <skos:prefLabel xml:lang="en">Chile</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CHN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CHN</skos:notation>
+      <skos:prefLabel xml:lang="en">China</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#HKG">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>HKG</skos:notation>
+      <skos:prefLabel xml:lang="en">Hong Kong</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MAC">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>MAC</skos:notation>
+      <skos:prefLabel xml:lang="en">Macao, SAR China</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CXR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CXR</skos:notation>
+      <skos:prefLabel xml:lang="en">Christmas Island</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CCK">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>CCK</skos:notation>
+      <skos:prefLabel xml:lang="en">Cocos (Keeling Islands)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>COL</skos:notation>
+      <skos:prefLabel xml:lang="en">Colombia</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COM">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>COM</skos:notation>
+      <skos:prefLabel xml:lang="en">Comoros</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COG">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>COG</skos:notation>
+      <skos:prefLabel xml:lang="en">Congo (Brazzaville)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COD">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>COD</skos:notation>
+      <skos:prefLabel xml:lang="en">Congo (Kinshasa)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COK">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Country"/>
+      <skos:notation>COK</skos:notation>
+      <skos:prefLabel xml:lang="en">Cook Islands</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#CPV-Type">
+      <skos:prefLabel>CPV Type</skos:prefLabel>
+      <skos:definition>The CPV establishes a single classification system for public procurement aimed at standardising the references used by procuring entities to describe the purpose of procurement contracts and procurement projects.
+
+Compulsory use of Common Procurement Vocabulary (CPV) codes (Regulation (EC) No 213/2008)</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#03000000-1">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#CPV-Type"/>
+      <skos:notation>03000000-1</skos:notation>
+      <skos:prefLabel xml:lang="en">Agricultural, farming, fishing, forestry and related products</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#03100000-2">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#CPV-Type"/>
+      <skos:notation>03100000-2</skos:notation>
+      <skos:prefLabel xml:lang="en">Agricultural and horticultural products</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#03110000-5">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#CPV-Type"/>
+      <skos:notation>03110000-5</skos:notation>
+      <skos:prefLabel xml:lang="en">Crops, products of market gardening and horticulture</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#03111000-2">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#CPV-Type"/>
+      <skos:notation>03111000-2</skos:notation>
+      <skos:prefLabel xml:lang="en">Seeds</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#03111100-3">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#CPV-Type"/>
+      <skos:notation>03111100-3</skos:notation>
+      <skos:prefLabel xml:lang="en">Soya beans</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#...">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#CPV-Type"/>
+      <skos:notation>...</skos:notation>
+      <skos:prefLabel xml:lang="en">...</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Criterion-Group-Property-Type">
+      <skos:prefLabel>Criterion Group Property Type</skos:prefLabel>
+      <skos:definition>A code categorising the data structure category, how to use or process it, etc.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ON*">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Criterion-Group-Property-Type"/>
+      <skos:notation>ON*</skos:notation>
+      <skos:prefLabel xml:lang="en">Process the group always</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ONTRUE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Criterion-Group-Property-Type"/>
+      <skos:notation>ONTRUE</skos:notation>
+      <skos:prefLabel xml:lang="en">Process the group if the previous question was and INDICATOR answered with the value 'true'</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ONFALSE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Criterion-Group-Property-Type"/>
+      <skos:notation>ONFALSE</skos:notation>
+      <skos:prefLabel xml:lang="en">Process the group if the previous question was and INDICATOR answered with the value 'false'</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Currency">
+      <skos:prefLabel>Currency</skos:prefLabel>
+      <skos:definition>The Currencies Named Authority List (NAL) or Common Authority Table (CAT) is a controlled vocabulary listing currencies with their authority code and labels in the 24 official languages of the EU (when available). The list is based on the ISO standard ISO 4217. This NAL is maintained by the Publications Office of the EU in its Metadata Registry (MDR).</skos:definition>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Design-Contest-Type">
+      <skos:prefLabel>Design Contest Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#OPEN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Design-Contest-Type"/>
+      <skos:notation>OPEN</skos:notation>
+      <skos:prefLabel xml:lang="en">OPEN</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#RESTRICTED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Design-Contest-Type"/>
+      <skos:notation>RESTRICTED</skos:notation>
+      <skos:prefLabel xml:lang="en">RESTRICTED</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type">
+      <skos:prefLabel>Direct Award Justification Type</skos:prefLabel>
+      <skos:definition>Justifications for the choice of the negotiated procedure without prior publication of a call for competition or concession.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_PROC_OPEN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_PROC_OPEN</skos:notation>
+      <skos:prefLabel xml:lang="en">D_PROC_OPEN</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_PROC_RESTRICTED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_PROC_RESTRICTED</skos:notation>
+      <skos:prefLabel xml:lang="en">D_PROC_RESTRICTED</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_MANUF_FOR_RESEARCH">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_MANUF_FOR_RESEARCH</skos:notation>
+      <skos:prefLabel xml:lang="en">D_MANUF_FOR_RESEARCH</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_TECHNICAL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_TECHNICAL</skos:notation>
+      <skos:prefLabel xml:lang="en">D_TECHNICAL</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_ARTISTIC">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_ARTISTIC</skos:notation>
+      <skos:prefLabel xml:lang="en">D_ARTISTIC</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_PROTECT_RIGHTS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_PROTECT_RIGHTS</skos:notation>
+      <skos:prefLabel xml:lang="en">D_PROTECT_RIGHTS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_EXTREME_URGENCY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_EXTREME_URGENCY</skos:notation>
+      <skos:prefLabel xml:lang="en">D_EXTREME_URGENCY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_ADD_DELIVERIES_ORDERED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_ADD_DELIVERIES_ORDERED</skos:notation>
+      <skos:prefLabel xml:lang="en">D_ADD_DELIVERIES_ORDERED</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_REPETITION_EXISTING">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_REPETITION_EXISTING</skos:notation>
+      <skos:prefLabel xml:lang="en">D_REPETITION_EXISTING</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_CONTRACT_AWARDED_DESIGN_CONTEST">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_CONTRACT_AWARDED_DESIGN_CONTEST</skos:notation>
+      <skos:prefLabel xml:lang="en">D_CONTRACT_AWARDED_DESIGN_CONTEST</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_COMMODITY_MARKET">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_COMMODITY_MARKET</skos:notation>
+      <skos:prefLabel xml:lang="en">D_COMMODITY_MARKET</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_FROM_WINDING_PROVIDER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_FROM_WINDING_PROVIDER</skos:notation>
+      <skos:prefLabel xml:lang="en">D_FROM_WINDING_PROVIDER</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_FROM_LIQUIDATOR_CREDITOR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_FROM_LIQUIDATOR_CREDITOR</skos:notation>
+      <skos:prefLabel xml:lang="en">D_FROM_LIQUIDATOR_CREDITOR</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_NO_TENDERS_REQUESTS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_NO_TENDERS_REQUESTS</skos:notation>
+      <skos:prefLabel xml:lang="en">D_NO_TENDERS_REQUESTS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_PURE_RESEARCH">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_PURE_RESEARCH</skos:notation>
+      <skos:prefLabel xml:lang="en">D_PURE_RESEARCH</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_BARGAIN_PURCHASE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_BARGAIN_PURCHASE</skos:notation>
+      <skos:prefLabel xml:lang="en">D_BARGAIN_PURCHASE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#D_EXCLUSIVE_RIGHT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>D_EXCLUSIVE_RIGHT</skos:notation>
+      <skos:prefLabel xml:lang="en">D_EXCLUSIVE_RIGHT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PERIOD_FOR_PROCEDURE_INCOMPATIBLE_WITH_CRISIS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>PERIOD_FOR_PROCEDURE_INCOMPATIBLE_WITH_CRISIS</skos:notation>
+      <skos:prefLabel xml:lang="en">PERIOD_FOR_PROCEDURE_INCOMPATIBLE_WITH_CRISIS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#EXTREME_URGENCY_EVENTS_UNFORESEEABLE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>EXTREME_URGENCY_EVENTS_UNFORESEEABLE</skos:notation>
+      <skos:prefLabel xml:lang="en">EXTREME_URGENCY_EVENTS_UNFORESEEABLE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#REASONS_PROVIDED_PARTICULAR_TENDERER_TECHNICAL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>REASONS_PROVIDED_PARTICULAR_TENDERER_TECHNICAL</skos:notation>
+      <skos:prefLabel xml:lang="en">REASONS_PROVIDED_PARTICULAR_TENDERER_TECHNICAL</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#REASONS_PROVIDED_PARTICULAR_TENDERER_EXCLUSIVE_RIGHTS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>REASONS_PROVIDED_PARTICULAR_TENDERER_EXCLUSIVE_RIGHTS</skos:notation>
+      <skos:prefLabel xml:lang="en">REASONS_PROVIDED_PARTICULAR_TENDERER_EXCLUSIVE_RIGHTS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CONTRACT_RESEARCH_DIRECTIVE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>CONTRACT_RESEARCH_DIRECTIVE</skos:notation>
+      <skos:prefLabel xml:lang="en">CONTRACT_RESEARCH_DIRECTIVE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MANUFACTURED_BY_DIRECTIVE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>MANUFACTURED_BY_DIRECTIVE</skos:notation>
+      <skos:prefLabel xml:lang="en">MANUFACTURED_BY_DIRECTIVE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ADDITIONAL_WORKS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>ADDITIONAL_WORKS</skos:notation>
+      <skos:prefLabel xml:lang="en">ADDITIONAL_WORKS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SUPPLIES_QUOTED_PURCHASED_COMMODITY_MARKET">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>SUPPLIES_QUOTED_PURCHASED_COMMODITY_MARKET</skos:notation>
+      <skos:prefLabel xml:lang="en">SUPPLIES_QUOTED_PURCHASED_COMMODITY_MARKET</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#RECEIVERS_ARRANGEMENT_CREDITORS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>RECEIVERS_ARRANGEMENT_CREDITORS</skos:notation>
+      <skos:prefLabel xml:lang="en">RECEIVERS_ARRANGEMENT_CREDITORS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SUPPLIER_WINDING_UP_BUSINESS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>SUPPLIER_WINDING_UP_BUSINESS</skos:notation>
+      <skos:prefLabel xml:lang="en">SUPPLIER_WINDING_UP_BUSINESS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WORKS_REPETITION_EXISTING_WORKS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>WORKS_REPETITION_EXISTING_WORKS</skos:notation>
+      <skos:prefLabel xml:lang="en">WORKS_REPETITION_EXISTING_WORKS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AIR_MARITIME_TRANSPORT_FOR_ARMED_FORCES_DEPLOYMENT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>AIR_MARITIME_TRANSPORT_FOR_ARMED_FORCES_DEPLOYMENT</skos:notation>
+      <skos:prefLabel xml:lang="en">AIR_MARITIME_TRANSPORT_FOR_ARMED_FORCES_DEPLOYMENT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ONLY_IRREGULAR_INACCEPTABLE_TENDERERS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Direct-Award-Justification-Type"/>
+      <skos:notation>ONLY_IRREGULAR_INACCEPTABLE_TENDERERS</skos:notation>
+      <skos:prefLabel xml:lang="en">ONLY_IRREGULAR_INACCEPTABLE_TENDERERS</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#economic-operator-size">
+      <skos:prefLabel>economic-operator-size</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#micro">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#economic-operator-size"/>
+      <skos:notation>micro</skos:notation>
+      <skos:prefLabel xml:lang="en">Microenterprise</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#small">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#economic-operator-size"/>
+      <skos:notation>small</skos:notation>
+      <skos:prefLabel xml:lang="en">Small enterprise</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#medium">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#economic-operator-size"/>
+      <skos:notation>medium</skos:notation>
+      <skos:prefLabel xml:lang="en">Medium-sized-enterprise</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#large">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#economic-operator-size"/>
+      <skos:notation>large</skos:notation>
+      <skos:prefLabel xml:lang="en">Large enterprise</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#eEvaluation-Criterion-Type">
+      <skos:prefLabel>eEvaluation Criterion Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#Admistrative-Criterion">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#eEvaluation-Criterion-Type"/>
+      <skos:notation>Admistrative Criterion</skos:notation>
+      <skos:prefLabel xml:lang="en">Admistrative Criterion</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#Exclusion-Ground">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#eEvaluation-Criterion-Type"/>
+      <skos:notation>Exclusion Ground</skos:notation>
+      <skos:prefLabel xml:lang="en">Exclusion Ground</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#Selection-Criterion">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#eEvaluation-Criterion-Type"/>
+      <skos:notation>Selection Criterion</skos:notation>
+      <skos:prefLabel xml:lang="en">Selection Criterion</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#Award-Criterion">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#eEvaluation-Criterion-Type"/>
+      <skos:notation>Award Criterion</skos:notation>
+      <skos:prefLabel xml:lang="en">Award Criterion</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#Participation-Criterion">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#eEvaluation-Criterion-Type"/>
+      <skos:notation>Participation Criterion</skos:notation>
+      <skos:prefLabel xml:lang="en">Participation Criterion</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#EO-Group-Type">
+      <skos:prefLabel>EO Group Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CONSORTIUM">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Group-Type"/>
+      <skos:notation>CONSORTIUM</skos:notation>
+      <skos:prefLabel xml:lang="en">Consortium</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#JOINT_VENTURE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Group-Type"/>
+      <skos:notation>JOINT_VENTURE</skos:notation>
+      <skos:prefLabel xml:lang="en">Joint Venture</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#UNDERTAKING">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Group-Type"/>
+      <skos:notation>UNDERTAKING</skos:notation>
+      <skos:prefLabel xml:lang="en">Undertaking</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#EO-Role-Type">
+      <skos:prefLabel>EO Role Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#ST">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Role-Type"/>
+      <skos:notation>ST</skos:notation>
+      <skos:prefLabel xml:lang="en">Sole Tenderer</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#LE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Role-Type"/>
+      <skos:notation>LE</skos:notation>
+      <skos:prefLabel xml:lang="en">Lead Entity</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#OERON">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Role-Type"/>
+      <skos:notation>OERON</skos:notation>
+      <skos:prefLabel xml:lang="en">Other Entity (relied upon)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#OENRON">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Role-Type"/>
+      <skos:notation>OENRON</skos:notation>
+      <skos:prefLabel xml:lang="en">Other Entity (not relied upon)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MG">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#EO-Role-Type"/>
+      <skos:notation>MG</skos:notation>
+      <skos:prefLabel xml:lang="en">Memeber of a Group</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Evaluation-Dimension-Type">
+      <skos:prefLabel>Evaluation Dimension Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#QUALITY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Evaluation-Dimension-Type"/>
+      <skos:notation>QUALITY</skos:notation>
+      <skos:prefLabel xml:lang="en">QUALITY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PRICE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Evaluation-Dimension-Type"/>
+      <skos:notation>PRICE</skos:notation>
+      <skos:prefLabel xml:lang="en">PRICE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COST">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Evaluation-Dimension-Type"/>
+      <skos:notation>COST</skos:notation>
+      <skos:prefLabel xml:lang="en">COST</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Evaluation-GroupType">
+      <skos:prefLabel>Evaluation GroupType</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#REGULAR_BOARD">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Evaluation-GroupType"/>
+      <skos:notation>REGULAR_BOARD</skos:notation>
+      <skos:prefLabel xml:lang="en">REGULAR_BOARD</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#JURY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Evaluation-GroupType"/>
+      <skos:notation>JURY</skos:notation>
+      <skos:prefLabel xml:lang="en">JURY</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Evaluation-Method-Type">
+      <skos:prefLabel>Evaluation Method Type</skos:prefLabel>
+      <skos:definition>A code signifying the type of Evaluation.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PASSFAIL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Evaluation-Method-Type"/>
+      <skos:notation>PASSFAIL</skos:notation>
+      <skos:prefLabel xml:lang="en">Pass or fail</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WEIGHTED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Evaluation-Method-Type"/>
+      <skos:notation>WEIGHTED</skos:notation>
+      <skos:prefLabel xml:lang="en">The criterion is weighted</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type">
+      <skos:prefLabel>Exclusion Ground Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONVICTIONS.PARTICIPATION_IN_CRIMINAL_ORGANISATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONVICTIONS.CORRUPTION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONVICTIONS.FRAUD">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONVICTIONS.FRAUD</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONVICTIONS.FRAUD</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONVICTIONS.TERRORIST_OFFENCES</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONVICTIONS.MONEY_LAUNDERING</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONVICTIONS.CHILD_LABOUR-HUMAN_TRAFFICKING</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_TAXES</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONTRIBUTIONS.PAYMENT_OF_SOCIAL_SECURITY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.SOCIAL.ENVIRONMENTAL_LAW</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.SOCIAL.SOCIAL_LAW">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.SOCIAL.SOCIAL_LAW</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.SOCIAL.SOCIAL_LAW</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.SOCIAL.LABOUR_LAW">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.SOCIAL.LABOUR_LAW</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.SOCIAL.LABOUR_LAW</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.BUSINESS.INSOLVENCY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.BUSINESS.INSOLVENCY</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.BUSINESS.INSOLVENCY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.BUSINESS.CREDITORS_ARRANGEMENT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.BUSINESS.CREDITORS_ARRANGEMENT</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.BUSINESS.CREDITORS_ARRANGEMENT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY_ANALOGOUS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY_ANALOGOUS</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.BUSINESS.BANKRUPTCY_ANALOGOUS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.BUSINESS.LIQUIDATOR_ADMINISTERED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.BUSINESS.LIQUIDATOR_ADMINISTERED</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.BUSINESS.LIQUIDATOR_ADMINISTERED</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.BUSINESS.ACTIVITIES_SUSPENDED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.BUSINESS.ACTIVITIES_SUSPENDED</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.BUSINESS.ACTIVITIES_SUSPENDED</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.MISCONDUCT.MC_PROFESSIONAL</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.MISCONDUCT.MARKET_DISTORTION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.MISCONDUCT.MARKET_DISTORTION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.MISCONDUCT.MARKET_DISTORTION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PARTICIPATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PARTICIPATION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PARTICIPATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PREPARATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PREPARATION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.PROCEDURE_PREPARATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.EARLY_TERMINATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.EARLY_TERMINATION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.EARLY_TERMINATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.MISINTERPRETATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.MISINTERPRETATION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.CONFLICT_OF_INTEREST.MISINTERPRETATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.EXCLUSION.NATIONAL.OTHER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Exclusion-Ground-Type"/>
+      <skos:notation>CRITERION.EXCLUSION.NATIONAL.OTHER</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.EXCLUSION.NATIONAL.OTHER</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Framework-Agreement-Type">
+      <skos:prefLabel>Framework Agreement Type</skos:prefLabel>
+      <skos:definition>A concept to distinguish the different types of framework agreement, which are: 
+1. Framework agreement without reopening of competition,
+2. Framework agreement with reopening of competition, or 
+3. Framework agreement partly without reopening of competition.
+</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WITHOUT_REOPENING_COMPETITION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Framework-Agreement-Type"/>
+      <skos:notation>WITHOUT_REOPENING_COMPETITION</skos:notation>
+      <skos:prefLabel xml:lang="en">Framework agreement without reopening of competition</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WIT_REOPENING_COMPETITION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Framework-Agreement-Type"/>
+      <skos:notation>WIT_REOPENING_COMPETITION</skos:notation>
+      <skos:prefLabel xml:lang="en">Framework agreement with reopening of competition</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PARTLY_WITHOUT_REOPENING_COMPETITION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Framework-Agreement-Type"/>
+      <skos:notation>PARTLY_WITHOUT_REOPENING_COMPETITION</skos:notation>
+      <skos:prefLabel xml:lang="en">Framework agreement partly without reopening</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Joint-Procurement-Entity-Role-Type">
+      <skos:prefLabel>Joint Procurement Entity Role Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#JPL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Joint-Procurement-Entity-Role-Type"/>
+      <skos:notation>JPL</skos:notation>
+      <skos:prefLabel xml:lang="en">Joint procurement lead</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Language-Type">
+      <skos:prefLabel>Language Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Legal-Form-Type">
+      <skos:prefLabel>Legal Form Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#legal-basis">
+      <skos:prefLabel>legal-basis</skos:prefLabel>
+      <skos:definition>Based on Legal Basis list defined by MDR.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32009L0081">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32009L0081</skos:notation>
+      <skos:prefLabel xml:lang="en">Directive 2009/81/EC</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32007R1370">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32007R1370</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EC) No 1370/2007}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32014L0023">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32014L0023</skos:notation>
+      <skos:prefLabel xml:lang="en">Directive 2014/23/EU</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32014L0024">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32014L0024</skos:notation>
+      <skos:prefLabel xml:lang="en">Directive 2014/24/EU</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32014L0025">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32014L0025</skos:notation>
+      <skos:prefLabel xml:lang="en">Directive 2014/25/EU</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#31992L0013">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>31992L0013</skos:notation>
+      <skos:prefLabel xml:lang="en">Directive 92/13/EEC</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#31994D0001">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>31994D0001</skos:notation>
+      <skos:prefLabel xml:lang="en">Decision 94/1/EC, ECSC</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#31994D0800">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>31994D0800</skos:notation>
+      <skos:prefLabel xml:lang="en">Decision 94/800/EC</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32002D0309">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32002D0309</skos:notation>
+      <skos:prefLabel xml:lang="en">Decision 2002/309/EC, Euratom</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32005D0015">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32005D0015</skos:notation>
+      <skos:prefLabel xml:lang="en">Decision 2005/15/EC</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32007L0066">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32007L0066</skos:notation>
+      <skos:prefLabel xml:lang="en">Directive 2007/66/EC</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32007R0718">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32007R0718</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EC) No 718/2007}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32008R1008">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32008R1008</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EC) No 1008/2008}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32013L0016">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32013L0016</skos:notation>
+      <skos:prefLabel xml:lang="en">Directive 2013/16/EU</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32014D0115">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32014D0115</skos:notation>
+      <skos:prefLabel xml:lang="en">Decision 2014/115/EU</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32014D0691">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32014D0691</skos:notation>
+      <skos:prefLabel xml:lang="en">Decision 2014/691/EU</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32015R0323">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32015R0323</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EU) 2015/323}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#31985R2137">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>31985R2137</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EEC) No 2137/85}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32001R2157">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32001R2157</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EC) No 2157/2001}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32003R1435">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32003R1435</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EC) No 1435/2003}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32016D0002">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32016D0002</skos:notation>
+      <skos:prefLabel xml:lang="en">{Decision (EU) 2016/245 (ECB/2016/2)}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#32018R1046">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>32018R1046</skos:notation>
+      <skos:prefLabel xml:lang="en">{Regulation (EU, Euratom) 2018/1046}</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#other">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#legal-basis"/>
+      <skos:notation>other</skos:notation>
+      <skos:prefLabel xml:lang="en">Other</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#main-activity">
+      <skos:prefLabel>main-activity</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#hc-am">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>hc-am</skos:notation>
+      <skos:prefLabel xml:lang="en">Housing and community amenities</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#soc-pro">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>soc-pro</skos:notation>
+      <skos:prefLabel xml:lang="en">Social protection</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#rcr">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>rcr</skos:notation>
+      <skos:prefLabel xml:lang="en">Recreation, culture and religion</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#def">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>def</skos:notation>
+      <skos:prefLabel xml:lang="en">Defence</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#env">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>env</skos:notation>
+      <skos:prefLabel xml:lang="en">Environmental protection</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#econ">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>econ</skos:notation>
+      <skos:prefLabel xml:lang="en">Economic affairs</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#gh-pro-tran-dis">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>gh-pro-tran-dis</skos:notation>
+      <skos:prefLabel xml:lang="en">Production, transport or distribution of gas or heat</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#heal">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>heal</skos:notation>
+      <skos:prefLabel xml:lang="en">Health</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#air">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>air</skos:notation>
+      <skos:prefLabel xml:lang="en">Airport-related activities</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#go-ext">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>go-ext</skos:notation>
+      <skos:prefLabel xml:lang="en">Extraction of gas or oil</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#port">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>port</skos:notation>
+      <skos:prefLabel xml:lang="en">Port-related activities</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#edu">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>edu</skos:notation>
+      <skos:prefLabel xml:lang="en">Education</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#csf-exp-ext">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>csf-exp-ext</skos:notation>
+      <skos:prefLabel xml:lang="en">Exploration or extraction of coal or other solid fuels</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#elec">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>elec</skos:notation>
+      <skos:prefLabel xml:lang="en">Electricity-related activities</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#post">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>post</skos:notation>
+      <skos:prefLabel xml:lang="en">Postal services</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#rail">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>rail</skos:notation>
+      <skos:prefLabel xml:lang="en">Railway services</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#gen-pub">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>gen-pub</skos:notation>
+      <skos:prefLabel xml:lang="en">General public services</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#urttb">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>urttb</skos:notation>
+      <skos:prefLabel xml:lang="en">Urban railway, tramway, trolleybus or bus services</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#pub-os">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>pub-os</skos:notation>
+      <skos:prefLabel xml:lang="en">Public order and safety</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#water">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#main-activity"/>
+      <skos:notation>water</skos:notation>
+      <skos:prefLabel xml:lang="en">Water-related activities</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#MDR:TimePeriod">
+      <skos:prefLabel>MDR:TimePeriod</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#NUTS">
+      <skos:prefLabel>NUTS</skos:prefLabel>
+      <skos:definition>e.g. NUTS 2016</skos:definition>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Participation-Criterion-Type">
+      <skos:prefLabel>Participation Criterion Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SHELTERED_WORKSHOP">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Participation-Criterion-Type"/>
+      <skos:notation>SHELTERED_WORKSHOP</skos:notation>
+      <skos:prefLabel xml:lang="en">SHELTERED_WORKSHOP</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SHELTERED_EMPLOYMENT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Participation-Criterion-Type"/>
+      <skos:notation>SHELTERED_EMPLOYMENT</skos:notation>
+      <skos:prefLabel xml:lang="en">SHELTERED_EMPLOYMENT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#RESERVED_SERVICES">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Participation-Criterion-Type"/>
+      <skos:notation>RESERVED_SERVICES</skos:notation>
+      <skos:prefLabel xml:lang="en">RESERVED_SERVICES</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#permission">
+      <skos:prefLabel>permission</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#allowed">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#permission"/>
+      <skos:notation>allowed</skos:notation>
+      <skos:prefLabel xml:lang="en">Tenders may</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#not-allowed">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#permission"/>
+      <skos:notation>not-allowed</skos:notation>
+      <skos:prefLabel xml:lang="en">Tenders cannot</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#required">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#permission"/>
+      <skos:notation>required</skos:notation>
+      <skos:prefLabel xml:lang="en">Tenders must</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#PIN-Type">
+      <skos:prefLabel>PIN Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PIN_ONLY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#PIN-Type"/>
+      <skos:notation>PIN_ONLY</skos:notation>
+      <skos:prefLabel xml:lang="en">Prior Information Notice Only</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PIN_CALL_COMPETITION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#PIN-Type"/>
+      <skos:notation>PIN_CALL_COMPETITION</skos:notation>
+      <skos:prefLabel xml:lang="en">Prior Information Notice Call for Competition</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#PIN_REDUCING_TIME_LIMITS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#PIN-Type"/>
+      <skos:notation>PIN_REDUCING_TIME_LIMITS</skos:notation>
+      <skos:prefLabel xml:lang="en">Prior Information Notice to reduce the time limits</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type">
+      <skos:prefLabel>Procurement Procedure Type</skos:prefLabel>
+      <skos:definition>It specifies the sort of procurement procedure, which will regulate the conditions and deadlines that apply to the process.</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#OPEN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>OPEN</skos:notation>
+      <skos:prefLabel xml:lang="en">Open procurement procedure</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#RESTRICTED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>RESTRICTED</skos:notation>
+      <skos:prefLabel xml:lang="en">Restricted procurement procedure</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#NEGOTIATED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>NEGOTIATED</skos:notation>
+      <skos:prefLabel xml:lang="en">Negotiated procedure</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AWARD_DIRECT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>AWARD_DIRECT</skos:notation>
+      <skos:prefLabel xml:lang="en">Direct award</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COMP_NEGOTIATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>COMP_NEGOTIATION</skos:notation>
+      <skos:prefLabel xml:lang="en">Competitive procedure with negotiation</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#COMP_DIALOGUE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>COMP_DIALOGUE</skos:notation>
+      <skos:prefLabel xml:lang="en">Competitive dialogue</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#INNOVATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>INNOVATION</skos:notation>
+      <skos:prefLabel xml:lang="en">Innovation partnership</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#NEGOTIATED_WO_CALL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>NEGOTIATED_WO_CALL</skos:notation>
+      <skos:prefLabel xml:lang="en">Negotiated without a prior call for competition</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AWARD_WO_PUB">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>AWARD_WO_PUB</skos:notation>
+      <skos:prefLabel xml:lang="en">Contract award without prior publication</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#OTHER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>OTHER</skos:notation>
+      <skos:prefLabel xml:lang="en">Other</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#LOV">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Procedure-Type"/>
+      <skos:notation>LOV</skos:notation>
+      <skos:prefLabel xml:lang="en">Negotiated Procedure for low value contracts</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Procurement-Regime-Type">
+      <skos:prefLabel>Procurement Regime Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SOCIAL_SPECIFIC_SERVICES">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Regime-Type"/>
+      <skos:notation>SOCIAL_SPECIFIC_SERVICES</skos:notation>
+      <skos:prefLabel xml:lang="en">Social an other specific services</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#DESIGN_CONTEST">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procurement-Regime-Type"/>
+      <skos:notation>DESIGN_CONTEST</skos:notation>
+      <skos:prefLabel xml:lang="en">Design contest</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Procuring-Entity-Type">
+      <skos:prefLabel>Procuring Entity Type</skos:prefLabel>
+      <skos:definition>Wouldn't this rather refer to the nature of the one who organises the procedure and signs the contract, something like the "Contract Owner Type"?
+
+(tbd with the WG)</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CE.CA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procuring-Entity-Type"/>
+      <skos:notation>CE.CA</skos:notation>
+      <skos:prefLabel xml:lang="en">Contracting Authority with CE activities</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CE.PU">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procuring-Entity-Type"/>
+      <skos:notation>CE.PU</skos:notation>
+      <skos:prefLabel xml:lang="en">Public Undertaking with CE acitivities</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CE.ESER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procuring-Entity-Type"/>
+      <skos:notation>CE.ESER</skos:notation>
+      <skos:prefLabel xml:lang="en">Contracting Entity with special or exclusive rights</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CA">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Procuring-Entity-Type"/>
+      <skos:notation>CA</skos:notation>
+      <skos:prefLabel xml:lang="en">Contracitng Authority with other activities different to the ones of a CE</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type">
+      <skos:prefLabel>Selection Criterion Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.SUITABILITY.PROFESSIONAL_REGISTER_ENROLMENT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.SUITABILITY.TRADE_REGISTER_ENROLMENT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.SUITABILITY.AUTHORISATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.SUITABILITY.AUTHORISATION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.SUITABILITY.AUTHORISATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.SUITABILITY.MEMBERSHIP">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.SUITABILITY.MEMBERSHIP</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.SUITABILITY.MEMBERSHIP</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.GENERAL_YEARLY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.AVERAGE_YEARLY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.AVERAGE_YEARLY</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.AVERAGE_YEARLY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SPECIFIC_AVERAGE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SPECIFIC_AVERAGE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SPECIFIC_AVERAGE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SPECIFIC_YEARLY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SPECIFIC_YEARLY</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SPECIFIC_YEARLY</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.FINANCIAL_RATIO">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.FINANCIAL_RATIO</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.FINANCIAL_RATIO</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENTS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENTS</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENTS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.WORKS_PERFORMANCE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.WORKS_PERFORMANCE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.WORKS_PERFORMANCE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SUPPLIES_DELIVERY_PERFORMANCE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SUPPLIES_DELIVERY_PERFORMANCE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SUPPLIES_DELIVERY_PERFORMANCE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SERVICES_DELIVERY_PERFORMANCE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SERVICES_DELIVERY_PERFORMANCE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.REFERENCES.SERVICES_DELIVERY_PERFORMANCE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_QUALITY_CONTROL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_QUALITY_CONTROL</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_QUALITY_CONTROL</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_CARRYING_WORKS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_CARRYING_WORKS</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.TECHNICIANS_FOR_CARRYING_WORKS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.FACILITIES_FOR_QUALITY_ENSURING">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.FACILITIES_FOR_QUALITY_ENSURING</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.FACILITIES_FOR_QUALITY_ENSURING</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.FACILITIES_FOR_STUDY_RESEARCH">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.FACILITIES_FOR_STUDY_RESEARCH</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.FACILITIES_FOR_STUDY_RESEARCH</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.SUPPLY_CHAIN_MANAGEMENT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.SUPPLY_CHAIN_MANAGEMENT</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.SUPPLY_CHAIN_MANAGEMENT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.PROFESSIONAL_QUALIFICATIONS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.PROFESSIONAL_QUALIFICATIONS</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.PROFESSIONAL_QUALIFICATIONS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.ENVIRONMENTAL_MANAGEMENT_MEASURES">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.ENVIRONMENTAL_MANAGEMENT_MEASURES</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.ENVIRONMENTAL_MANAGEMENT_MEASURES</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.EQUIPMENT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.EQUIPMENT</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.EQUIPMENT</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.CHECKS.ALLOWANCE_OF_CHECKS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.CHECKS.ALLOWANCE_OF_CHECKS</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.CHECKS.ALLOWANCE_OF_CHECKS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.MANAGERIAL_STAFF">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.MANAGERIAL_STAFF</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.MANAGERIAL_STAFF</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.AVERAGE_ANNUAL_MANPOWER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.AVERAGE_ANNUAL_MANPOWER</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.AVERAGE_ANNUAL_MANPOWER</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.SUBCONTRACTING_PROPORTION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.SUBCONTRACTING_PROPORTION</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.SUBCONTRACTING_PROPORTION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.NO_AUTHENTICATED_ARTEFACTS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.NO_AUTHENTICATED_ARTEFACTS</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.NO_AUTHENTICATED_ARTEFACTS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.AUTHENTICATED_ARTEFACTS">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.AUTHENTICATED_ARTEFACTS</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.AUTHENTICATED_ARTEFACTS</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.ENVIRONMENTAL_MANAGEMENT.ENV_INDEPENDENT_CERTIFICATE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.ENVIRONMENTAL_MANAGEMENT.ENV_INDEPENDENT_CERTIFICATE</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.ENVIRONMENTAL_MANAGEMENT.ENV_INDEPENDENT_CERTIFICATE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CRITERION.SELECTION.ALL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Selection-Criterion-Type"/>
+      <skos:notation>CRITERION.SELECTION.ALL</skos:notation>
+      <skos:prefLabel xml:lang="en">CRITERION.SELECTION.ALL</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Submission-Document-Type">
+      <skos:prefLabel>Submission Document Type</skos:prefLabel>
+      <skos:definition>The period during which tenders submitted for this procurement procedure must remain valid.
+
+(Pending to review by the WG)
+</skos:definition>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#TENDER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Submission-Document-Type"/>
+      <skos:notation>TENDER</skos:notation>
+      <skos:prefLabel xml:lang="en">TENDER</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#EXPRESSION_OF_INTEREST">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Submission-Document-Type"/>
+      <skos:notation>EXPRESSION_OF_INTEREST</skos:notation>
+      <skos:prefLabel xml:lang="en">EXPRESSION_OF_INTEREST</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#REQUEST_FOR_PARTICIPATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Submission-Document-Type"/>
+      <skos:notation>REQUEST_FOR_PARTICIPATION</skos:notation>
+      <skos:prefLabel xml:lang="en">REQUEST_FOR_PARTICIPATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#REQUEST_FOR_CLARIFICATION">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Submission-Document-Type"/>
+      <skos:notation>REQUEST_FOR_CLARIFICATION</skos:notation>
+      <skos:prefLabel xml:lang="en">REQUEST_FOR_CLARIFICATION</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#timeperiods">
+      <skos:prefLabel>timeperiods</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#YEAR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>YEAR</skos:notation>
+      <skos:prefLabel xml:lang="en">(_S|Year)(_P|Years)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#YEAR_HALF">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>YEAR_HALF</skos:notation>
+      <skos:prefLabel xml:lang="en">Half year</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#QUARTER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>QUARTER</skos:notation>
+      <skos:prefLabel xml:lang="en">Quarter</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SPRING">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>SPRING</skos:notation>
+      <skos:prefLabel xml:lang="en">Spring</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SUMMER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>SUMMER</skos:notation>
+      <skos:prefLabel xml:lang="en">Summer</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AUTUMN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>AUTUMN</skos:notation>
+      <skos:prefLabel xml:lang="en">Autumn</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WINTER">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>WINTER</skos:notation>
+      <skos:prefLabel xml:lang="en">Winter</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MONTH">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>MONTH</skos:notation>
+      <skos:prefLabel xml:lang="en">(_S|Month)(_P|Months)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#JAN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>JAN</skos:notation>
+      <skos:prefLabel xml:lang="en">January</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#FEB">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>FEB</skos:notation>
+      <skos:prefLabel xml:lang="en">February</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MAR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>MAR</skos:notation>
+      <skos:prefLabel xml:lang="en">March</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#APR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>APR</skos:notation>
+      <skos:prefLabel xml:lang="en">April</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MAY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>MAY</skos:notation>
+      <skos:prefLabel xml:lang="en">May</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#JUN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>JUN</skos:notation>
+      <skos:prefLabel xml:lang="en">June</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#JUL">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>JUL</skos:notation>
+      <skos:prefLabel xml:lang="en">July</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#AUG">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>AUG</skos:notation>
+      <skos:prefLabel xml:lang="en">August</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SEP">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>SEP</skos:notation>
+      <skos:prefLabel xml:lang="en">September</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#OCT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>OCT</skos:notation>
+      <skos:prefLabel xml:lang="en">October</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#NOV">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>NOV</skos:notation>
+      <skos:prefLabel xml:lang="en">November</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#DEC">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>DEC</skos:notation>
+      <skos:prefLabel xml:lang="en">December</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WEEK">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>WEEK</skos:notation>
+      <skos:prefLabel xml:lang="en">Week</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MON">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>MON</skos:notation>
+      <skos:prefLabel xml:lang="en">Monday</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#TUE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>TUE</skos:notation>
+      <skos:prefLabel xml:lang="en">Tuesday</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>WED</skos:notation>
+      <skos:prefLabel xml:lang="en">Wednesday</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#THU">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>THU</skos:notation>
+      <skos:prefLabel xml:lang="en">Thursday</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#FRI">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>FRI</skos:notation>
+      <skos:prefLabel xml:lang="en">Friday</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SAT">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>SAT</skos:notation>
+      <skos:prefLabel xml:lang="en">Saturday</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SUN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>SUN</skos:notation>
+      <skos:prefLabel xml:lang="en">Sunday</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#DAY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>DAY</skos:notation>
+      <skos:prefLabel xml:lang="en">(_S|Day)(_P|Days)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#HOUR">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>HOUR</skos:notation>
+      <skos:prefLabel xml:lang="en">(_S|Hour)(_P|Hours)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#MIN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>MIN</skos:notation>
+      <skos:prefLabel xml:lang="en">(_S|Minute)(_P|Minutes)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#SEC">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>SEC</skos:notation>
+      <skos:prefLabel xml:lang="en">(_S|Second)(_P|Seconds)</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#UNLIMITED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>UNLIMITED</skos:notation>
+      <skos:prefLabel xml:lang="en">Unlimited</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#UNKNOWN">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>UNKNOWN</skos:notation>
+      <skos:prefLabel xml:lang="en">Unknown</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#CALENDAR_DAY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>CALENDAR_DAY</skos:notation>
+      <skos:prefLabel xml:lang="en">Calendar Day</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#WORKING_DAY">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#timeperiods"/>
+      <skos:notation>WORKING_DAY</skos:notation>
+      <skos:prefLabel xml:lang="en">Working Day</skos:prefLabel>
+   </skos:Concept>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#UnitCode">
+      <skos:prefLabel>UnitCode</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:ConceptScheme rdf:about="http://data.europa.eu/ePO/ontology#Variant-Terms-Type">
+      <skos:prefLabel>Variant Terms Type</skos:prefLabel>
+   </skos:ConceptScheme>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#VARIANT_AUTHORISE">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Variant-Terms-Type"/>
+      <skos:notation>VARIANT_AUTHORISE</skos:notation>
+      <skos:prefLabel xml:lang="en">VARIANT_AUTHORISE</skos:prefLabel>
+   </skos:Concept>
+   <skos:Concept rdf:about="http://data.europa.eu/ePO/ontology#VARIANT_REQUIRED">
+      <skos:inScheme rdf:resource="http://data.europa.eu/ePO/ontology#Variant-Terms-Type"/>
+      <skos:notation>VARIANT_REQUIRED</skos:notation>
+      <skos:prefLabel xml:lang="en">VARIANT_REQUIRED</skos:prefLabel>
+   </skos:Concept>
+</rdf:RDF>

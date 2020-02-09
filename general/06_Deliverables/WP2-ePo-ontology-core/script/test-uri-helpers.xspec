@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    stylesheet="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/naming-utils.xsl">
+
+    <x:scenario label="Scenario for testing function buildElementURI">
+        <x:call template="buildElementURI">
+            <x:param name="xmiElement"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/elements/element[@xmi:type = 'uml:Class' and @name='Organization']"
+            />
+            <x:param name="root"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')"
+            />
+        </x:call>
+        <x:expect label="Organization URI">http://www.w3.org/ns/org#Organization</x:expect>
+    </x:scenario>
+
+    <x:scenario label="test getting the org namespace definition">
+        <x:call template="getNamespaceValue">
+            <x:param name="prefix">org</x:param>
+            <x:param name="sourceContent"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/namespaces.xml')"
+            />
+        </x:call>
+        <x:expect label="http namespace">http://www.w3.org/ns/org#</x:expect>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing function buildAttributeURI">
+        <x:call template="buildAttributeURI">
+            <x:param name="xmiElement"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:XMI/xmi:Extension/elements/element[@xmi:type = 'uml:Enumeration' and @name='Evaluation Method Type']"
+            />
+            <x:param name="xmiAttribute"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:XMI/xmi:Extension/elements/element[@xmi:type = 'uml:Enumeration' and @name='Evaluation Method Type']/attributes/attribute[@name = 'PASSFAIL']"
+            />
+            <x:param name="root"
+                select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')"
+            />
+        </x:call>
+        <x:expect label="URI">http://data.europa.eu/ePO/ontology#PASSFAIL</x:expect>
+    </x:scenario>
+
+</x:description>

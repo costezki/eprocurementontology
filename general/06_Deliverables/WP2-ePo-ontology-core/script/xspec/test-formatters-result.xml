@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="file:/home/lps/work/software/OxygenXMLEditor21/frameworks/xspec/src/compiler/format-xspec-report.xsl"?>
+<x:report xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:test="http://www.jenitennison.com/xslt/unit-test"
+          xmlns:x="http://www.jenitennison.com/xslt/xspec"
+          stylesheet="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/xmi2owl_00.xsl"
+          date="2020-02-08T11:37:07.712+01:00"
+          xspec="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/test-formatters.xspec">
+   <x:scenario>
+      <x:label>Scenario for testing function formatDocString</x:label>
+      <x:call template="formatDocString">
+         <x:param name="input" select="'simple text'"/>
+      </x:call>
+      <x:result select="/node()">simple text</x:result>
+      <x:test successful="true">
+         <x:label>same simple text</x:label>
+         <x:expect select="/node()">simple text</x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>formatNameString - normalised spaces and replaced with hyphens</x:label>
+      <x:call template="formatNameString">
+         <x:param name="input"> Class  Name </x:param>
+      </x:call>
+      <x:result select="/node()">Class-Name</x:result>
+      <x:test successful="true">
+         <x:label>hypenated name</x:label>
+         <x:expect select="/node()">Class-Name</x:expect>
+      </x:test>
+   </x:scenario>
+   <x:scenario>
+      <x:label>teste namespace prefix getter</x:label>
+      <x:call template="getNamespaceValue">
+         <x:param name="prefix">org</x:param>
+         <x:param name="sourceContent" select="doc('namespaces.xml')"/>
+      </x:call>
