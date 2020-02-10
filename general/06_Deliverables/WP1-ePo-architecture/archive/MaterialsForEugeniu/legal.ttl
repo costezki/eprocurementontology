@@ -1,0 +1,160 @@
+# baseURI: http://www.w3.org/ns/legal
+# imports: http://purl.org/dc/terms/
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/ns/locn
+# imports: http://www.w3.org/ns/org#
+# imports: http://xmlns.com/foaf/0.1/
+# prefix: legal
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix legal: <http://www.w3.org/ns/legal#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xhtm: <http://www.w3.org/1999/xhtml> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/ns/legal>
+  a owl:Ontology ;
+  cc:attributionName "European Commission"@en ;
+  cc:attributionURL <http://ec.europa.eu/> ;
+  dcterms:abstract """The Business Core Vocabulary provides a minimum set of classes and properties for
+    describing a registered legal entity (business). Its limited scope does not include sole traders, or
+    relationships between registered legal entities. This vocabulary is closely integrated with the
+    Location and Person Core Vocabularies."""@en ;
+  dcterms:conformsTo <https://joinup.ec.europa.eu/elibrary/document/isa-deliverable-process-and-methodology-developing-core-vocabularies> ;
+  dcterms:creator [
+      schema:affiliation [
+          foaf:name "European Commission, Joint Research Centre (JRC)"@en ;
+        ] ;
+      rdfs:seeAlso <http://andrea-perego.name/foaf/#me> ;
+      foaf:homepage <http://andrea-perego.name/> ;
+      foaf:name "Andrea Perego"@en ;
+    ] ;
+  dcterms:creator [
+      schema:affiliation [
+          foaf:name "W3C/ERCIM"@en ;
+        ] ;
+      rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
+      foaf:homepage <http://philarcher.org/> ;
+      foaf:name "Phil Archer"@en ;
+    ] ;
+  dcterms:description """This is the RDF encoding of the Business Core Vocabulary developed under the European Commission's ISA Programme, specifically under SEMIC Phase II, directed by Vassilios Peristeras of DG DIGIT.
+    """@en ;
+  dcterms:license <https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11> ;
+  dcterms:modified "2012-07-03"^^xsd:date ;
+  dcterms:relation <https://joinup.ec.europa.eu/asset/core_business/topic/public-comments-core-business-vocabulary-v02> ;
+  dcterms:rights "Copyright © 2012 European Commission."@en ;
+  vann:preferredNamespacePrefix "legal"@en ;
+  vann:preferredNamespaceUri "http://www.w3.org/ns/legal#"@en ;
+  xhv:last <http://www.w3.org/ns/legal> ;
+  rdfs:comment "This file specifies the set of RDF classes and properties used in the Business Core Vocabulary"@en ;
+  rdfs:label "Business Core Vocabulary"@en ;
+  owl:imports dcterms: ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/locn> ;
+  owl:imports org: ;
+  owl:imports foaf: ;
+  owl:versionInfo "Version 1.00 07 May 2012"@en ;
+  wdrs:describedby <https://joinup.ec.europa.eu/system/files/project/Core_Vocabularies-Business_Location_Person-Specification-v0.3_0.zip> ;
+  foaf:depiction <http://www.w3.org/ns/Core_Vocabularies_1.0.png> ;
+  foaf:maker [
+      foaf:name "Core Vocabularies Working Group (Business Task Force)"@en ;
+      foaf:page <http://joinup.ec.europa.eu/asset/core_business/home> ;
+    ] ;
+.
+legal:LegalEntity
+  a rdfs:Class ;
+  a owl:Class ;
+  rdfs:comment """This is the key class for the Business Core Vocabulary and represents a 
+business that is legally registered."""@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "Legal Entity"@en ;
+  rdfs:subClassOf org:FormalOrganization ;
+  skos:scopeNote """In many countries there is a single registry although in others, 
+such as Spain and Germany, multiple registries exist. A Legal Entity is able to trade, is 
+legally liable for its actions, accounts, tax affairs etc. It is a sub class of org:FormalOrganization
+which covers a wider range of entities, such as charities."""@en ;
+.
+legal:companyActivity
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "The economical activity of a company."@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "company activity"@en ;
+  skos:scopeNote """The activity of a company should be recorded using a controlled vocabulary expressed
+ as a SKOS concept scheme (see <a xmlns=\"http://www.w3.org/ns/legal#\" href=\"#skos:Concept\">Code</a>. Several such 
+ vocabularies exist, many of which map to the UN's ISIC codes. Where a particular controlled vocabulary is in use 
+ within a given context, such as SIC codes in the UK, it is acceptable to use these, however, the preferred 
+ choice for European interoperability is NACE."""@en ;
+.
+legal:companyStatus
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "The legal status of a company."@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "company status"@en ;
+  skos:scopeNote """Terms like insolvent, bankrupt and in receivership are likely to have 
+different legal implications in different jurisdictions. Best Practice for recording various 
+other status levels is to use the relevant jurisdiction's terms and to do so in a 
+consistent manner using a skos:Concept as described in the <a xmlns=\"http://www.w3.org/ns/legal#\" href=\"#skos:Concept\">Code</a> Class. 
+The term \"Normal Activity\" appears to have cross-border usefulness 
+ and this should be used in preference to terms like trading or operating."""@en ;
+.
+legal:companyType
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "the legal type of the company."@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "company type"@en ;
+  skos:scopeNote """This property records the type of company. Familiar types are SA, PLC, LLC, GmbH etc. Each 
+jurisdiction will have a limited set of recognised company types and these should be used in a consistent manner
+using a skos:Concept as described in the <a xmlns=\"http://www.w3.org/ns/legal#\" href=\"#skos:Concept\">Code</a> Class."""@en ;
+.
+legal:legalEntity
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "The legal entity relationship can be used to link any resource to an instance of a Legal Entity Class."@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "legal entity"@en ;
+  skos:scopeNote "This property can be used when an organisation includes one or more legal entities. The Dublin Core term isPartOf is a suitable inverse of this relationship."@en ;
+.
+legal:legalIdentifier
+  a rdf:Property ;
+  a owl:DatatypeProperty ;
+  rdfs:comment """The legal identifier is a fundamental relationship between a legal entity and the 
+authority with which it is registered and that confers legal status upon it."""@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "legal identifer"@en ;
+  skos:scopeNote "legal:legalIdentifier is a sub property of dcterms:identifier. legal:legalIdentifier has a defined domain of legal:LegalEntity"@en ;
+.
+legal:legalName
+  a rdf:Property ;
+  a owl:DatatypeProperty ;
+  rdfs:comment "The legal name of the business."@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "legal name"@en ;
+  skos:scopeNote """A business might have more than one 
+legal name, particularly in countries with more than one official language. In such cases the 
+language of the string should be identified."""@en ;
+.
+legal:registeredAddress
+  a rdf:Property ;
+  a owl:ObjectProperty ;
+  rdfs:comment "Links a Legal Entity to its registered address."@en ;
+  rdfs:isDefinedBy <http://www.w3.org/ns/legal> ;
+  rdfs:label "registered address"@en ;
+  skos:scopeNote "This may or may not be the actual address at which the legal entity does its business, it is commonly the address of their lawyer or accountant, but it is the address to which formal communications can be sent. legal:registeredAddress is a sub property of locn:address that has a domain of legal:LegalEntity and a range of locn:Address."@en ;
+.

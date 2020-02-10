@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns="http://semic.eu/corevocab/legal#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:adms="http://www.w3.org/ns/adms#" 
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:loc="http://www.w3.org/ns/locn#"
+    targetNamespace="http://semic.eu/corevocab/legal#" elementFormDefault="qualified">
+    <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="dcterms.xsd"/>
+    <xs:import namespace="http://www.w3.org/ns/adms#" schemaLocation="adms.xsd"/>
+    <xs:import namespace="http://www.w3.org/ns/locn#" schemaLocation="locn.xsd"/>
+    <xs:import namespace="http://www.w3.org/2004/02/skos/core#" schemaLocation="skos.xsd"/>
+    <xs:element name="LegalEntityCollection" type="LegalEntityCollectionType"/>
+    <xs:complexType name="LegalEntityCollectionType">
+        <xs:choice maxOccurs="unbounded">
+            <xs:any></xs:any>
+        </xs:choice>
+    </xs:complexType>
+    <xs:element name="LegalEntity" type="LegalEntityType">
+        <xs:annotation>
+            <xs:documentation>
+                This is the key class for the Business Core Vocabulary and represents a 
+                business that is legally registered. In many countries there is a single registry although in others, 
+                such as Spain and Germany, multiple registries exist. A Legal Entity is able to trade, is 
+                legally liable for its actions, accounts, tax affairs etc. It is a sub class of org:FormalOrganization
+                which covers a wider range of entities, such as charities.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="LegalEntityType">
+        <xs:sequence>
+            <xs:element name="legalIdentifier" type="xs:string"/>
+            <xs:element name="legalName" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dct:alternative" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="dct:identifier" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="companyActivity" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:appinfo>the uri needs to refer to a Concept(skos) taken from the XXX ConceptScheme</xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Concept" type="PointerType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="companyStatus" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:appinfo>the uri needs to refer to a Concept(skos) taken from the XXX ConceptScheme</xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Concept" type="PointerType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="companyType" minOccurs="0" maxOccurs="1">
+                <xs:annotation>
+                    <xs:appinfo>the uri needs to refer to a Concept(skos) taken from the XXX ConceptScheme</xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Concept" type="PointerType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="legalRegisteredAddress">
+                <xs:annotation>
+                    <xs:appinfo>the uri refers to an Address identifier</xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Address" type="PointerType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="PointerType">
+        <xs:attribute name="refID" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,44 @@
+# baseURI: http://www.w3.org/ns/legal-semantics
+# imports: http://www.w3.org/ns/legal
+# prefix: legal-semantics
+
+@prefix legal-semantics: <http://www.w3.org/ns/legal-semantics#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/ns/legal#LegalEntity>
+  owl:disjointWith <http://www.w3.org/ns/locn#Address> ;
+.
+<http://www.w3.org/ns/legal#companyActivity>
+  rdfs:domain <http://www.w3.org/ns/legal#LegalEntity> ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/org#classification> ;
+.
+<http://www.w3.org/ns/legal#companyStatus>
+  rdfs:domain <http://www.w3.org/ns/legal#LegalEntity> ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/org#classification> ;
+.
+<http://www.w3.org/ns/legal#companyType>
+  rdfs:domain <http://www.w3.org/ns/legal#LegalEntity> ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/org#classification> ;
+.
+<http://www.w3.org/ns/legal#legalEntity>
+  rdfs:range <http://www.w3.org/ns/legal#LegalEntity> ;
+.
+<http://www.w3.org/ns/legal#legalIdentifier>
+  a owl:InverseFunctionalProperty ;
+  rdfs:range rdfs:Literal ;
+  rdfs:subPropertyOf <http://purl.org/dc/terms/identifier> ;
+.
+<http://www.w3.org/ns/legal#legalName>
+  rdfs:range rdfs:Literal ;
+.
+<http://www.w3.org/ns/legal#registeredAddress>
+  rdfs:range <http://www.w3.org/ns/locn#Address> ;
+  rdfs:subPropertyOf <http://www.w3.org/ns/locn#address> ;
+.
+<http://www.w3.org/ns/legal-semantics>
+  a owl:Ontology ;
+  owl:imports <http://www.w3.org/ns/legal> ;
+.

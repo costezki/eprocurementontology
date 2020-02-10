@@ -1,0 +1,36 @@
+# baseURI: http://www.belgium.org/ns/legal-constraints
+# imports: http://datashapes.org/dash
+# imports: http://www.w3.org/ns/legal-constraints
+
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix legal-constraints: <http://www.w3.org/ns/legal-constraints#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.belgium.org/ns/legal-constraints>
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports <http://www.w3.org/ns/legal-constraints> ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+legal-constraints:LegalEntity-legal_companyActivity
+  sh:description "Use the belgian NACE codes at <a href=\"https://vocab.belgif.be/auth/nace2008\">https://vocab.belgif.be/auth/nace2008</a>."@en ;
+  sh:pattern "^http://vocab.belgif.be/auth/nace2008/.*" ;
+.
+legal-constraints:LegalEntity-legal_companyStatus
+  sh:in (
+      <http://vocab.belgif.be/auth/companyStatus/active>
+      <http://vocab.belgif.be/auth/companyStatus/defaulted>
+      <http://vocab.belgif.be/auth/companyStatus/stopped>
+    ) ;
+.
+legal-constraints:LegalEntity-legal_companyType
+  sh:pattern "^http://vocab.belgif.be/auth/cbe-org1800/.+" ;
+.
+legal-constraints:LegalEntity-legal_legalIdentifier
+  sh:description "In Belgium use the KBO number as legal identifier."@en ;
+  sh:pattern "^0\\d{3}\\.\\d{3}\\.\\d{3}" ;
+.
