@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
-    stylesheet="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/formatting-uitils.xsl">
+    stylesheet="formatting-uitils.xsl">
+    
     <x:scenario label="Scenario for testing function formatDocString">
         <x:call template="formatDocString">
             <x:param name="input" select="'simple text'"/>
@@ -14,6 +15,5 @@
         </x:call>
         <x:expect label="hypenated name">Class-Name</x:expect>
     </x:scenario>
-    
-    
+
 </x:description>

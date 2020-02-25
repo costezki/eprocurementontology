@@ -160,6 +160,7 @@
                             </rdfs:comment>
                         </xsl:when>
                     </xsl:choose>            
+                
                 </owl:Class>
             </xsl:when>
             <xsl:otherwise>
@@ -175,10 +176,6 @@
                 
             </xsl:otherwise>
         </xsl:choose>
-        
-        
-        
-        
     </xsl:template>
     
     
