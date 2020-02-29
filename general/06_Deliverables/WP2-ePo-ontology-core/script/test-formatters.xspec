@@ -15,5 +15,35 @@
         </x:call>
         <x:expect label="hypenated name">Class-Name</x:expect>
     </x:scenario>
+    
+    
+    <x:scenario label="filterSpecialCharacters">
+        <x:call template="filterSpecialCharacters">
+            <x:param name="input">Th!is   i-s a  clean   str!in*g</x:param>            
+        </x:call>
+        <x:expect label="clean string">This is a clean string</x:expect>
+    </x:scenario>
+    
+    <x:scenario label="it should return the same string after applying the filter">
+        <x:call template="filterSpecialCharacters">
+            <x:param name="input">this is a String</x:param>            
+        </x:call>
+        <x:expect label="clean string">this is a String</x:expect>
+    </x:scenario>
+    
+    <x:scenario label="class name to CamelCase - first letter is uppercase">
+        <x:call template="classNameToCamelCase">
+            <x:param name="input">class Name tEst </x:param>
+        </x:call>
+        <x:expect label="camelCasedClassName">ClassNameTest</x:expect>
+    </x:scenario>
+    
+    <x:scenario label="class name with special characters to CamelCase - first letter is uppercase">
+        <x:call template="classNameToCamelCase">
+            <x:param name="input">cla$ss Name* tEst </x:param>
+        </x:call>
+        <x:expect label="camelCasedClassName">ClassNameTest</x:expect>
+    </x:scenario>
 
 </x:description>
+

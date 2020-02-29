@@ -49,4 +49,43 @@
         <xsl:value-of select="fn:encode-for-uri($doc1)"/>
     </xsl:template>
     
+    
+    <xd:doc>
+        <xd:desc>Filter any string from special characters (only letters and numbers allowed)</xd:desc>
+        <xd:param name="input"/>
+    </xd:doc>
+    <xsl:template name="filterSpecialCharacters" as="item()*">
+        <xsl:param name="input"/>
+        <xsl:variable name="allowedCharacters" select="'[a-zA-Z0-9]'"/>
+        <xsl:variable name="unwanted" select="translate(fn:replace($input,$allowedCharacters,''),' ','')"/>
+        <xsl:value-of select="fn:normalize-space(fn:translate($input,$unwanted,''))"/>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Transform class name to CamelCase</xd:desc>
+        <xd:param name="input"/>
+    </xd:doc>
+    <xsl:template name="classNameToCamelCase">
+        <xsl:param name="input"/>
+        <xsl:variable name="filterClass">
+            <xsl:call-template name="filterSpecialCharacters">
+                <xsl:with-param name="input" select="$input"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:variable name="words" select="tokenize($filterClass,'\s+')"/>
+<!--        <xsl:variable name="pula" select="for $x in $words return concat(upper-case(substring($x, 1, 1)), lower-case(substring($x, 2)))"/>
+        <xsl:value-of select="$pula"/>-->
+<!--        <xsl:for-each select="distinct-values($words)">
+            <xsl:variable name="pula" as="xs:string" select="."/>
+            <xsl:variable name="pula2" select="concat(upper-case(substring($pula, 1, 1)), lower-case(substring($pula, 2)))"/>
+            <xsl:value-of select="$pula2"/>
+            
+        </xsl:for-each>-->
+        <xsl:for-each select="distinct-values($words)">
+            <xsl:variable name="word" as="xs:string" select="."/>
+            <xsl:variable name="capitalizeFirstLetter" select="fn:upper-case(fn:substring($word, 1, 1))"/>
+            <xsl:variable name="lowerCaseRestOfTheLetters" select="fn:lower-case(fn:substring($word, 2))"/>
+            <xsl:value-of select="fn:concat($capitalizeFirstLetter, $lowerCaseRestOfTheLetters)"/>
+        </xsl:for-each>
+    </xsl:template>
 </xsl:stylesheet>
