@@ -73,19 +73,30 @@
             </xsl:call-template>
         </xsl:variable>
         <xsl:variable name="words" select="tokenize($filterClass,'\s+')"/>
-<!--        <xsl:variable name="pula" select="for $x in $words return concat(upper-case(substring($x, 1, 1)), lower-case(substring($x, 2)))"/>
-        <xsl:value-of select="$pula"/>-->
-<!--        <xsl:for-each select="distinct-values($words)">
-            <xsl:variable name="pula" as="xs:string" select="."/>
-            <xsl:variable name="pula2" select="concat(upper-case(substring($pula, 1, 1)), lower-case(substring($pula, 2)))"/>
-            <xsl:value-of select="$pula2"/>
-            
-        </xsl:for-each>-->
         <xsl:for-each select="distinct-values($words)">
             <xsl:variable name="word" as="xs:string" select="."/>
             <xsl:variable name="capitalizeFirstLetter" select="fn:upper-case(fn:substring($word, 1, 1))"/>
             <xsl:variable name="lowerCaseRestOfTheLetters" select="fn:lower-case(fn:substring($word, 2))"/>
             <xsl:value-of select="fn:concat($capitalizeFirstLetter, $lowerCaseRestOfTheLetters)"/>
         </xsl:for-each>
+    </xsl:template>
+    
+    <xd:doc>
+        <xd:desc>Transform property name to camelCase</xd:desc>
+        <xd:param name="input"/>
+    </xd:doc>
+    <xsl:template name="propertyNameToCamelCase">
+        <xsl:param name="input"/>
+        <xsl:variable name="filterProperty">
+            <xsl:call-template name="filterSpecialCharacters">
+                <xsl:with-param name="input" select="$input"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:variable name="firstWord" select="fn:tokenize($filterProperty,'\s+')[position() = 1]"/>
+        <xsl:variable name="lowerCasedFirstWord" select="fn:lower-case($firstWord)"/>
+        <xsl:variable name="words" select="tokenize($filterProperty,'\s+')[position() > 1]"/>
+        <xsl:variable name="formatRestOfWords" select="for $word in $words return fn:concat(fn:upper-case(fn:substring($word, 1, 1)), fn:lower-case(substring($word, 2)))"/>
+        <xsl:variable name="restOfWordsWithoutSpace" select="fn:string-join($formatRestOfWords)"/>
+        <xsl:value-of select="fn:concat($lowerCasedFirstWord, $restOfWordsWithoutSpace)"/>
     </xsl:template>
 </xsl:stylesheet>

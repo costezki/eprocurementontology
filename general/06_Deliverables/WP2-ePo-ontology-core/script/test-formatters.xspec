@@ -44,6 +44,20 @@
         </x:call>
         <x:expect label="camelCasedClassName">ClassNameTest</x:expect>
     </x:scenario>
+    
+    <x:scenario label="property name to camelCase - first letter is lowercase">
+        <x:call template="propertyNameToCamelCase">
+            <x:param name="input">Property Name tEst </x:param>
+        </x:call>
+        <x:expect label="camelCasedPropertyName">propertyNameTest</x:expect>
+    </x:scenario>
+    
+    <x:scenario label="property name with special characters to camelCase - first letter is lowercase">
+        <x:call template="propertyNameToCamelCase">
+            <x:param name="input">PrOpe$rt!y$ Name* tEst </x:param>
+        </x:call>
+        <x:expect label="camelCasedPropertyName">propertyNameTest</x:expect>
+    </x:scenario>
 
 </x:description>
 
