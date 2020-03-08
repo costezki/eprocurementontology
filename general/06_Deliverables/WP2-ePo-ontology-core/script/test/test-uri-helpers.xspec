@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    stylesheet="../naming-utils.xsl">
+
+    <x:scenario label="Scenario for testing function buildElementURI">
+        <x:call template="buildElementURI">
+            <x:param name="xmiElement" href="../../test/ePO-CM_v2.0.1_test.eap.xmi" select="//xmi:Extension/elements/element[@xmi:type = 'uml:Class' and @name='Organization']"
+            />
+            <x:param name="root" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="/"
+            />
+        </x:call>
+        <x:expect label="Organization URI">http://www.w3.org/ns/org#Organization</x:expect>
+    </x:scenario>
+
+    <x:scenario label="test getting the org namespace definition">
+        <x:call template="getNamespaceValue">
+            <x:param name="prefix">org</x:param>
+            <x:param name="sourceContent" href="../../data/namespaces.xml" select="/"
+            />
+        </x:call>
+        <x:expect label="http namespace">http://www.w3.org/ns/org#</x:expect>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing function buildAttributeURI">
+        <x:call template="buildAttributeURI">
+            <x:param name="xmiElement" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="//xmi:XMI/xmi:Extension/elements/element[@xmi:type = 'uml:Enumeration' and @name='Evaluation Method Type']"
+            />
+            <x:param name="xmiAttribute" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="//xmi:XMI/xmi:Extension/elements/element[@xmi:type = 'uml:Enumeration' and @name='Evaluation Method Type']/attributes/attribute[@name = 'PASSFAIL']"
+            />
+            <x:param name="root" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="/"
+            />
+        </x:call>
+        <x:expect label="URI">http://data.europa.eu/ePO/ontology#PASSFAIL</x:expect>
+    </x:scenario>
+
+
+    <x:scenario label="Scenario for testing function build connector URI">
+        <x:call template="buildConnectorURI">
+            <x:param name="xmiConnector" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="//xmi:Extension/connectors/connector[ @xmi:idref = 'EAID_1F057680_2DD1_465d_A815_73DADF8FF850']"
+            />
+            <x:param name="root" href="../../test/ePO-CM_v2.0.1_test.eap.xmi" select="/"
+            />
+        </x:call>
+        <x:expect label="URI">http://data.europa.eu/ePO/ontology#has-EO-Group-Type</x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing function build connector end URI">
+        <x:call template="buildConnectorEndURI">
+            <x:param name="xmiConnector" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="//xmi:Extension/connectors/connector[./@xmi:idref = 'EAID_9BFA9CBA_AA02_4344_997E_2891C61F633A']"
+            />
+            <x:param name="xmiConnectorEnd" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="//xmi:Extension/connectors/connector[./@xmi:idref = 'EAID_9BFA9CBA_AA02_4344_997E_2891C61F633A']/target"/>
+            <x:param name="root" href="../../test/ePO-CM_v2.0.1_test.eap.xmi"
+                select="/"
+            />
+        </x:call>
+        <x:expect label="URI">http://data.europa.eu/ePO/ontology#makes-decsion</x:expect>
+    </x:scenario>
+
+</x:description>

@@ -8,7 +8,7 @@
                 xmlns:impl="urn:x-xspec:compile:xslt:impl"
                 version="2"
                 exclude-result-prefixes="pkg impl">
-   <xsl:import href="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/xmi2owl_00.xsl"/>
+   <xsl:import href="../xmi2owl_00.xsl"/>
    <xsl:import href="file:/home/lps/work/software/OxygenXMLEditor21/frameworks/xspec/src/compiler/generate-tests-utils.xsl"/>
    <xsl:import href="file:/home/lps/work/software/OxygenXMLEditor21/frameworks/xspec/src/schematron/sch-location-compare.xsl"/>
    <xsl:namespace-alias stylesheet-prefix="__x" result-prefix="xsl"/>
@@ -27,7 +27,7 @@
          <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="file:/home/lps/work/software/OxygenXMLEditor21/frameworks/xspec/src/compiler/format-xspec-report.xsl"</xsl:processing-instruction>
          <x:report stylesheet="{$x:stylesheet-uri}"
                    date="{current-dateTime()}"
-                   xspec="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/test-uri-helpers.xspec">
+                   xspec="../test/test-uri-helpers.xspec">
             <xsl:call-template name="x:d5e2"/>
             <xsl:call-template name="x:d5e7"/>
          </x:report>
@@ -39,10 +39,10 @@
          <x:label>Scenario for testing function buildElementURI</x:label>
          <x:call template="buildElementURI">
             <x:param name="xmiElement"
-                     select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/elements/element[@xmi:type = 'uml:Class' and @name='Organization']"/>
+               select="doc('../../test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/elements/element[@xmi:type = 'uml:Class' and @name='Organization']"/>
          </x:call>
          <xsl:variable name="x:result" as="item()*">
-            <xsl:variable select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/elements/element[@xmi:type = 'uml:Class' and @name='Organization']"
+            <xsl:variable select="doc('../../test/ePO-CM_v2.0.1.eap.xmi')//xmi:Extension/elements/element[@xmi:type = 'uml:Class' and @name='Organization']"
                           name="xmiElement"/>
             <xsl:call-template name="buildElementURI">
                <xsl:with-param name="xmiElement" select="$xmiElement"/>
@@ -91,7 +91,7 @@
                <xsl:text>org</xsl:text>
             </x:param>
             <x:param name="sourceContent"
-                     select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/namespaces.xml')"/>
+               select="doc('../../data/namespaces.xml')"/>
          </x:call>
          <xsl:variable name="x:result" as="item()*">
             <xsl:variable name="prefix-doc" as="document-node()">
@@ -100,7 +100,7 @@
                </xsl:document>
             </xsl:variable>
             <xsl:variable name="prefix" select="$prefix-doc/node()"/>
-            <xsl:variable select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/namespaces.xml')"
+            <xsl:variable select="doc('../../data/namespaces.xml')"
                           name="sourceContent"/>
             <xsl:call-template name="getNamespaceValue">
                <xsl:with-param name="prefix" select="$prefix"/>

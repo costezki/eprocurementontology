@@ -35,3 +35,5 @@
          <x:param name="prefix">org</x:param>
          <x:param name="sourceContent" select="doc('namespaces.xml')"/>
       </x:call>
+   </x:scenario>
+</x:report>
