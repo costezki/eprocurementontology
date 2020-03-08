@@ -106,7 +106,7 @@
             </x:param>
             <x:param>
                <xsl:attribute name="name">sourceContent</xsl:attribute>
-               <xsl:attribute name="select">doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/namespaces.xml')</xsl:attribute>
+               <xsl:attribute name="select">doc('../data/namespaces.xml')</xsl:attribute>
             </x:param>
          </x:call>
          <xsl:variable name="x:result" as="item()*">
@@ -121,7 +121,7 @@
                </xsl:for-each>
             </xsl:variable>
             <xsl:variable name="sourceContent"
-                          select="doc('file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/namespaces.xml')"/>
+               select="doc('../data/namespaces.xml')"/>
             <xsl:call-template name="getNamespaceValue">
                <xsl:with-param name="prefix" select="$prefix"/>
                <xsl:with-param name="sourceContent" select="$sourceContent"/>

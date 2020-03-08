@@ -8,13 +8,14 @@
                 xmlns:impl="urn:x-xspec:compile:xslt:impl"
                 version="2"
                 exclude-result-prefixes="pkg impl">
-   <xsl:import href="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/xmi2owl_00.xsl"/>
+   <xsl:import href="../xmi2owl_00.xsl"/>
+   <xsl:import href="../test/test-formatters.xspec"/>
    <xsl:import href="file:/home/lps/work/software/OxygenXMLEditor21/frameworks/xspec/src/compiler/generate-tests-utils.xsl"/>
    <xsl:import href="file:/home/lps/work/software/OxygenXMLEditor21/frameworks/xspec/src/schematron/sch-location-compare.xsl"/>
    <xsl:namespace-alias stylesheet-prefix="__x" result-prefix="xsl"/>
    <xsl:variable name="x:stylesheet-uri"
                  as="xs:string"
-                 select="'file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/xmi2owl_00.xsl'"/>
+                 select="'../xmi2owl_00.xsl'"/>
    <xsl:output name="x:report" method="xml" indent="yes"/>
    <xsl:template name="x:main">
       <xsl:message>
@@ -27,7 +28,7 @@
          <xsl:processing-instruction name="xml-stylesheet">type="text/xsl" href="file:/home/lps/work/software/OxygenXMLEditor21/frameworks/xspec/src/compiler/format-xspec-report.xsl"</xsl:processing-instruction>
          <x:report stylesheet="{$x:stylesheet-uri}"
                    date="{current-dateTime()}"
-                   xspec="file:/home/lps/work/workspace-charm/eprocurementontology/general/06_Deliverables/WP2-ePo-ontology-core/script/test-formatters.xspec">
+                   xspec="../test/test-formatters.xspec">
             <xsl:call-template name="x:d5e2"/>
             <xsl:call-template name="x:d5e7"/>
             <xsl:call-template name="x:d5e13"/>
@@ -143,7 +144,7 @@
             <x:param name="prefix">
                <xsl:text>org</xsl:text>
             </x:param>
-            <x:param name="sourceContent" select="doc('namespaces.xml')"/>
+            <x:param name="sourceContent" select="doc('../../data/namespaces.xml')"/>
          </x:call>
          <xsl:variable name="x:result" as="item()*">
             <xsl:variable name="prefix-doc" as="document-node()">
@@ -152,7 +153,7 @@
                </xsl:document>
             </xsl:variable>
             <xsl:variable name="prefix" select="$prefix-doc/node()"/>
-            <xsl:variable select="doc('namespaces.xml')" name="sourceContent"/>
+            <xsl:variable select="doc('../../data/namespaces.xml')" name="sourceContent"/>
             <xsl:call-template name="getNamespaceValue">
                <xsl:with-param name="prefix" select="$prefix"/>
                <xsl:with-param name="sourceContent" select="$sourceContent"/>
