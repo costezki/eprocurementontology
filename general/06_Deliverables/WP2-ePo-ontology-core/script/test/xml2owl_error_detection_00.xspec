@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:uml="http://www.omg.org/spec/UML/20131001"
+    xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+    xmlns:umldi="http://www.omg.org/spec/UML/20131001/UMLDI"
+    xmlns:dc="http://www.omg.org/spec/UML/20131001/UMLDC"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    stylesheet="../xml2owl_error_detection_00.xsl">
+    
+    
+    <x:variable name="testData1" href="../../test/ePO-CM_v2.0.1_test.eap.xmi" select="/xmi:XMI[1]/xmi:Extension[1]/elements[1]/element[102]"></x:variable>
+    
+    <x:scenario label="the claases with faulty names should be reported as rdfs:comments">
+        <x:call template="detectFaultyClassName">
+            <x:param name="classElement" select="$testData1"/>
+        </x:call>
+        <x:expect label="there is an rdf element" test="count(//rdf:Description) = 1" />
+        <x:expect label="there is a comment" test="count(//rdfs:comment) = 1"/>
+        <x:expect label="subject uri is teh error constant" test="//rdf:Description/@rdf:about = 'http://error/URI/illegal/name/attribute/'"/>
+    </x:scenario>
+    
+</x:description>

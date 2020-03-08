@@ -10,17 +10,20 @@
     xmlns:dc="http://www.omg.org/spec/UML/20131001/UMLDC" xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    version="3.0">
-    
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#" version="3.0">
+
     <xd:doc scope="stylesheet">
         <xd:desc>
             <xd:p><xd:b>Created on:</xd:b> Feb 8, 2020</xd:p>
             <xd:p><xd:b>Author:</xd:b> Eugeniu Costetchi</xd:p>
-            <xd:p></xd:p>
+            <xd:p/>
         </xd:desc>
     </xd:doc>
-    
+
+    <!-- Global variables   -->
+    <xsl:variable name="allowedCharacters" select="'[a-zA-Z0-9]'"/>
+    <xsl:variable name="allowedStrings" select="'^[a-zA-Z0-9\s+]*$'"/>
+
     <xd:doc>
         <xd:desc/>
         <xd:param name="input"> Format the Documentation string </xd:param>
@@ -36,8 +39,8 @@
         <xsl:variable name="doc5" select="fn:replace($doc4, '\$inet://', '')"/>
         <xsl:value-of select="$doc5"/>
     </xsl:template>
-    
-    
+
+
     <xd:doc>
         <xd:desc>Produce a string that can be used as local segemtn in a URI</xd:desc>
         <xd:param name="input"/>
@@ -48,19 +51,29 @@
         <xsl:variable name="doc1" select="fn:replace($doc0, '\s', '-')"/>
         <xsl:value-of select="fn:encode-for-uri($doc1)"/>
     </xsl:template>
-    
-    
+
     <xd:doc>
-        <xd:desc>Filter any string from special characters (only letters and numbers allowed)</xd:desc>
+        <xd:desc>Check any string from special characters (only letters and numbers allowed) and
+            return true or false</xd:desc>
+        <xd:param name="input"/>
+    </xd:doc>
+    <xsl:template name="hasSpecialCharacters" as="item()*">
+        <xsl:param name="input"/>
+        <xsl:value-of select="not(fn:matches($input, $allowedStrings))"/>
+    </xsl:template>
+
+    <xd:doc>
+        <xd:desc>Filter any string from special characters (only letters and numbers
+            allowed)</xd:desc>
         <xd:param name="input"/>
     </xd:doc>
     <xsl:template name="filterSpecialCharacters" as="item()*">
         <xsl:param name="input"/>
-        <xsl:variable name="allowedCharacters" select="'[a-zA-Z0-9]'"/>
-        <xsl:variable name="unwanted" select="translate(fn:replace($input,$allowedCharacters,''),' ','')"/>
-        <xsl:value-of select="fn:normalize-space(fn:translate($input,$unwanted,''))"/>
+        <xsl:variable name="unwanted"
+            select="translate(fn:replace($input, $allowedCharacters, ''), ' ', '')"/>
+        <xsl:value-of select="fn:normalize-space(fn:translate($input, $unwanted, ''))"/>
     </xsl:template>
-    
+
     <xd:doc>
         <xd:desc>Transform class name to CamelCase</xd:desc>
         <xd:param name="input"/>
@@ -72,15 +85,17 @@
                 <xsl:with-param name="input" select="$input"/>
             </xsl:call-template>
         </xsl:variable>
-        <xsl:variable name="words" select="tokenize($filterClass,'\s+')"/>
+        <xsl:variable name="words" select="tokenize($filterClass, '\s+')"/>
         <xsl:for-each select="distinct-values($words)">
             <xsl:variable name="word" as="xs:string" select="."/>
-            <xsl:variable name="capitalizeFirstLetter" select="fn:upper-case(fn:substring($word, 1, 1))"/>
-            <xsl:variable name="lowerCaseRestOfTheLetters" select="fn:lower-case(fn:substring($word, 2))"/>
+            <xsl:variable name="capitalizeFirstLetter"
+                select="fn:upper-case(fn:substring($word, 1, 1))"/>
+            <xsl:variable name="lowerCaseRestOfTheLetters"
+                select="fn:lower-case(fn:substring($word, 2))"/>
             <xsl:value-of select="fn:concat($capitalizeFirstLetter, $lowerCaseRestOfTheLetters)"/>
         </xsl:for-each>
     </xsl:template>
-    
+
     <xd:doc>
         <xd:desc>Transform property name to camelCase</xd:desc>
         <xd:param name="input"/>
@@ -92,10 +107,14 @@
                 <xsl:with-param name="input" select="$input"/>
             </xsl:call-template>
         </xsl:variable>
-        <xsl:variable name="firstWord" select="fn:tokenize($filterProperty,'\s+')[position() = 1]"/>
+        <xsl:variable name="firstWord" select="fn:tokenize($filterProperty, '\s+')[position() = 1]"/>
         <xsl:variable name="lowerCasedFirstWord" select="fn:lower-case($firstWord)"/>
-        <xsl:variable name="words" select="tokenize($filterProperty,'\s+')[position() > 1]"/>
-        <xsl:variable name="formatRestOfWords" select="for $word in $words return fn:concat(fn:upper-case(fn:substring($word, 1, 1)), fn:lower-case(substring($word, 2)))"/>
+        <xsl:variable name="words" select="tokenize($filterProperty, '\s+')[position() > 1]"/>
+        <xsl:variable name="formatRestOfWords"
+            select="
+                for $word in $words
+                return
+                    fn:concat(fn:upper-case(fn:substring($word, 1, 1)), fn:lower-case(substring($word, 2)))"/>
         <xsl:variable name="restOfWordsWithoutSpace" select="fn:string-join($formatRestOfWords)"/>
         <xsl:value-of select="fn:concat($lowerCasedFirstWord, $restOfWordsWithoutSpace)"/>
     </xsl:template>
